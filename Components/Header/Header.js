@@ -3,42 +3,21 @@ import styled from 'styled-components'
 import Logo from '../UI/Logo/Logo'
 import Navbar from './Navbar/Navbar'
 import Link from 'next/link'
-import Search from '../UI/Search/Search'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/pro-light-svg-icons'
-import Backdrop from '../UI/Backdrop/BackdropSection'
-import RegisterModal from '../UI/RegisterModal/RegisterModal'
-import Overlay from '../UI/Overlay/Overlay'
-import ILogo from '../UI/Logo/ILogo/ILogo'
-
+import TopNavbar from './TopNavbar/TopNavbar'
 function Header() {
-    const [showSearch, setShowSearch] = useState(false)
-    const [showRegisterModal, setShowRegisterModal] = useState(false)
-
-    // show search bar
-    const searchIconHandler = () => {
-        setShowSearch(true)
-    }
-    const hideSearchIconHandler = () => {
-        setShowSearch(false)
-    }
     return (
         <React.Fragment>
-            <Backdrop show={showSearch} clicked={hideSearchIconHandler}></Backdrop>
+            <TopNavbar />
             <Container>
                 <Link href="/" passHref>
-                    <a> <LogoStyle showIcon={true} mobile="true" /></a>
+                    <a> <LogoStyle /></a>
                 </Link>
 
-                <SearchContainer>
-                    <IconStyle icon={faSearch} onClick={searchIconHandler} />
-                    <SearchStyle showSearch={showSearch} />
-                </SearchContainer>
-
-                <Navbar registerClickButtonPass={() => setShowRegisterModal(true)} />
+                <Navbar />
             </Container>
-            {showRegisterModal ? <RegisterModal closeModal={() => setShowRegisterModal(false)} /> : null}
-            {showRegisterModal ? <Overlay /> : null}
+
         </React.Fragment>
     )
 }
@@ -63,20 +42,7 @@ const LogoStyle = styled(Logo)`
     z-index: -1;
 }
 `
-const SearchContainer = styled.div`
-width: 50% !important;
-@media(max-width: 600px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-`
-const SearchStyle = styled(Search)`
-@media(max-width: 600px) {
-    display: ${(props) => !props.showSearch ? "none" : "block"};
 
-}
-`
 
 const IconStyle = styled(FontAwesomeIcon)`
 font-size: 30px;

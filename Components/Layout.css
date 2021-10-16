@@ -1,13 +1,12 @@
 :root {
   --letterSpacing: 0.04rem;
   --offWhite: #f2f2f2;
+  --white: #ffffff;
   --beige: #efeae5;
   --darkBeige: #fde6ce;
   --lightGrey: #888888;
-  --blue: #007272;
-  --darkGrey: #474747;
-  --black: #303030;
-  --poppins: "Poppins", sans-serif;
+  --darkGreen: #2e5e37;
+  --darkGrey: #17212a;
   --transition: 500ms ease-in-out;
   --boxShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
   --cardBorderRadius: 16px;
@@ -17,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box !important;
+  font-family: "Source Sans Pro", sans-serif;
 }
 h6 {
   margin: 0;

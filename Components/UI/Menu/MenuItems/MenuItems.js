@@ -16,9 +16,11 @@ export default MenuItems
 
 const Container = styled.li`
 list-style: none;
-@media(max-width: 1000px){ 
+margin-left: 50px ;
+font-size: 1.2rem;
+font-weight: 600;
+cursor: pointer;
 
-}
 `
 const LinkStyle = styled.a`
 color: var(--darkGrey);
@@ -28,6 +30,6 @@ text-decoration: none;
     display: block;
 }
 &:hover{ 
-    color: black;
+    color: var(--darkGreen);
 }
 `

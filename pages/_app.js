@@ -1,46 +1,30 @@
 import Layout from '../Components/Layout'
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import '../Components/Layout.css'
-import { ModalContextProvider } from '../store/modal-context';
-import { AuthContextProvider } from '../store/auth-context';
-import { NotificationContextProvider } from '../store/notification-context';
-import { UserDataContextProvider } from '../store/user-data-context';
-import { BoardsDataContextProvider } from '../store/boards-data-context';
-import { OrdersDataContextProvider } from '../store/orders-context';
-import { ProfessionalDataContextProvider } from '../store/professional-context';
 import Head from 'next/head'
 import TagManager from 'react-gtm-module';
+import { ContactInfoContextProvider } from '../store/contact-info-context'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-PS7XFHN' });
   }, []);
   return (
-    <NotificationContextProvider>
-      <ModalContextProvider>
-        <BoardsDataContextProvider>
-          <UserDataContextProvider>
-            <ProfessionalDataContextProvider>
-              <OrdersDataContextProvider>
-                <AuthContextProvider>
-                  <GlobalStyle />
-                  <ThemeProvider theme={theme}>
-                    <Layout>
-                      <Head>
-                        <meta charSet="utf-8" />
-                        <meta name="viewport" content="width=device-width, initial-scale=1" />
-                      </Head>
-                      <Component {...pageProps} />
-                    </Layout>
-                  </ThemeProvider>
-                </AuthContextProvider>
-              </OrdersDataContextProvider>
-            </ProfessionalDataContextProvider>
-          </UserDataContextProvider>
-        </BoardsDataContextProvider>
-      </ModalContextProvider>
-    </NotificationContextProvider>
+    <React.Fragment>
+      <ContactInfoContextProvider>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <Layout>
+            <Head>
+              <meta charSet="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </Head>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </ContactInfoContextProvider>
+    </React.Fragment>
   )
 }
 
@@ -73,7 +57,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
