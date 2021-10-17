@@ -84,7 +84,7 @@ display: flex;
 &:last-child::after{ 
     content: "";
     border-right: none;
-    margin: 0 15px;
+    margin: 0 0;
 }
 
 &:hover{ 

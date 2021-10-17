@@ -15,15 +15,13 @@ class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet" />
+                    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+                    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
                 </Head>
                 <body>
                     <div id="loadingOverlay"></div>
                     <Main />
                     <NextScript />
-
-                    <script type="text/javascript"
-                        async defer
-                        src="https://assets.pinterest.com/js/pinit.js"></script>
                 </body>
             </Html>
         )

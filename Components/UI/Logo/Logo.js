@@ -20,7 +20,6 @@ function Logo({ className }) {
 export default Logo
 
 const Container = styled.div`
-margin-top: 20px;
 display: block;
 width: 100px;
 `

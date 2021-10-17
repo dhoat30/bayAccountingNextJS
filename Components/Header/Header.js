@@ -11,9 +11,9 @@ function Header() {
         <React.Fragment>
             <TopNavbar />
             <Container>
-                <Link href="/" passHref>
+                {/* <Link href="/" passHref>
                     <a> <LogoStyle /></a>
-                </Link>
+                </Link> */}
 
                 <Navbar />
             </Container>
@@ -25,34 +25,8 @@ function Header() {
 export default Header
 
 const Container = styled.section`
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-padding: 0 20px;
-height: 50px;
-position: relative;
-`
-
-const LogoStyle = styled(Logo)`
-@media (max-width: 450px){ 
-    width: 200px;
-    position: absolute;
-    top: 8px;
-    z-index: -1;
-}
-`
-
-
-const IconStyle = styled(FontAwesomeIcon)`
-font-size: 30px;
-display: none;
-cursor: pointer;
-@media(max-width: 600px) {
-    display: block;
-}
-@media (max-width: 450px){ 
-    font-size: 20px;
-}
-
+    max-width: 1500px; 
+    margin: 0 auto;
+    padding: 0 10px;
+  
 `

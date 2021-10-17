@@ -8,17 +8,17 @@ module.exports = (phase) => {
       },
       reactStrictMode: true,
       images: {
-        domains: ['http://localhost/bay-accounting']
+        domains: ['localhost']
       }
     }
   }
   return {
     env: {
-      url: "https://data.bayaccounting.co.nz"
+      url: "https://bayaccounting.co.nz"
     },
     reactStrictMode: true,
     images: {
-      domains: ['data.bayaccounting.co.nz']
+      domains: ['bayaccounting.co.nz']
     }
   }
 }

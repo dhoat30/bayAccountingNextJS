@@ -1,10 +1,12 @@
-import Layout from '../Components/Layout'
 import React, { useEffect } from 'react';
+import Layout from '../Components/Layout'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import '../Components/Layout.css'
 import Head from 'next/head'
 import TagManager from 'react-gtm-module';
 import { ContactInfoContextProvider } from '../store/contact-info-context'
+import { HeroImageContextProvider } from '../store/hero-image-context';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -13,16 +15,18 @@ function MyApp({ Component, pageProps }) {
   return (
     <React.Fragment>
       <ContactInfoContextProvider>
-        <GlobalStyle />
-        <ThemeProvider theme={theme}>
-          <Layout>
-            <Head>
-              <meta charSet="utf-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1" />
-            </Head>
-            <Component {...pageProps} />
-          </Layout>
-        </ThemeProvider>
+        <HeroImageContextProvider>
+          <GlobalStyle />
+          <ThemeProvider theme={theme}>
+            <Layout>
+              <Head>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+              </Head>
+              <Component {...pageProps} />
+            </Layout>
+          </ThemeProvider>
+        </HeroImageContextProvider>
       </ContactInfoContextProvider>
     </React.Fragment>
   )

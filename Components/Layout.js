@@ -3,6 +3,7 @@ import Header from './Header/Header'
 import axios from 'axios'
 import styled from 'styled-components'
 import ContactInfoContext from '../store/contact-info-context'
+import FooterSection from './FooterSection/FooterSection'
 function Layout(props) {
     const contactInfoCtx = useContext(ContactInfoContext)
     useEffect(() => {
@@ -17,11 +18,11 @@ function Layout(props) {
             })
             .catch(err => console.log(err))
     }, [])
-    console.log(contactInfoCtx)
     return (
         <div>
             <Header></Header>
             <Main>{props.children}</Main>
+            <FooterSection />
         </div>
     )
 }
