@@ -10,7 +10,7 @@ function ContactBar({ title, phoneNumber, email, streetAddress, city, openingHou
             <ColumnTitle color="white">{title}</ColumnTitle>
             <Links>
                 <Link>
-                    <Anchor href="#">
+                    <Anchor href={`tel: ${phoneNumber}`}>
                         <IconContainer>
                             <IconStyle icon={faPhoneAlt} />
                         </IconContainer>
@@ -18,7 +18,7 @@ function ContactBar({ title, phoneNumber, email, streetAddress, city, openingHou
                     </Anchor>
                 </Link>
                 <Link>
-                    <Anchor href="#">
+                    <Anchor href={`mailto: ${email}`} target="_blank">
                         <IconContainer>
                             <IconStyle icon={faEnvelope} />
                         </IconContainer>
@@ -26,7 +26,7 @@ function ContactBar({ title, phoneNumber, email, streetAddress, city, openingHou
                     </Anchor>
                 </Link>
                 <Link>
-                    <Anchor href="#">
+                    <Anchor href="" onClick={(e) => e.preventDefault()}>
                         <IconContainer>
                             <IconStyle icon={faMapMarkerAlt} size="2x" />
                         </IconContainer>
@@ -35,7 +35,7 @@ function ContactBar({ title, phoneNumber, email, streetAddress, city, openingHou
                     </Anchor>
                 </Link>
                 <Link>
-                    <Anchor href="#">
+                    <Anchor href="" onClick={(e) => e.preventDefault()}>
                         <IconContainer>
                             <IconStyle icon={faClock} />
                         </IconContainer>

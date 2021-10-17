@@ -1,9 +1,7 @@
 import React, { useState, useContext } from 'react'
-import Menu from '../../UI/Menu/Menu'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes, faChevronDown, faChevronUp } from '@fortawesome/pro-light-svg-icons'
-import Image from 'next/image'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
@@ -43,6 +41,9 @@ function NavbarComponent() {
                             </Link>
                         </NavDropdown>
                         <NavDropdown title="Services" >
+                            <Link href="/services" passHref>
+                                <NavDropdown.Item>All Services</NavDropdown.Item>
+                            </Link>
                             <Link href="/services/business-advisory" passHref>
                                 <NavDropdown.Item>Business Advisory</NavDropdown.Item>
                             </Link>
