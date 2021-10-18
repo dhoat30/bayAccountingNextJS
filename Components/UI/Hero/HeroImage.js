@@ -4,13 +4,13 @@ import styled from 'styled-components'
 import { useMediaQuery } from 'react-responsive'
 import LargeTitle from '../Titles/Titles/LargeTitle'
 
-function HeroImage({ images, subtitle }) {
+function HeroImage({ images, subtitle, smallHeight }) {
     const isMobile = useMediaQuery({
         query: '(min-width: 700px)'
     })
 
     return (
-        <Container>
+        <Container smallHeight={smallHeight}>
             {isMobile ?
                 <ImageStyle src={images.images.mobileImage} layout="fill" />
                 : <ImageStyle src={images.images.desktopImage} layout="fill" />
@@ -28,9 +28,11 @@ export default HeroImage
 const Container = styled.div`
 position: relative;
 width: 100%;
-padding-bottom: 43.75%;
+padding-bottom: ${props => props.smallHeight ? "30%" : "43.75%"};
 @media (min-width:1700px ){
     padding-bottom: 37%;
+    padding-bottom: ${props => props.smallHeight ? "20%" : "37%"};
+
 }
 @media (max-width: 700px){ 
     padding-bottom: 100%;
@@ -48,7 +50,8 @@ const Content = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    max-width: 700px;
+    max-width: 1200px;
+    text-transform: capitalize;
 `
 const Subtitle = styled.h2`
 text-align: center;

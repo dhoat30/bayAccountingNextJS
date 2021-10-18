@@ -22,6 +22,18 @@ body {
   box-sizing: border-box !important;
   font-family: "Source Sans Pro", sans-serif;
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: var(--darkGreen);
+}
 h6 {
   margin: 0;
 }

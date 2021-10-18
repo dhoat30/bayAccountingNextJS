@@ -7,12 +7,14 @@ function SectionTitle(props) {
 
             {props.dangerouslySetInnerHTML ?
                 <Container
+                    fontWeight={props.fontWeight}
                     backGround={props.bk}
                     dangerouslySetInnerHTML={props.dangerouslySetInnerHTML}
                     showUnderline={props.showUnderline}
                     className={props.className}>
                 </Container>
                 : <Container
+                    fontWeight={props.fontWeight}
                     backGround={props.bk}
                     align={props.align}
                     showUnderline={props.showUnderline}
@@ -28,7 +30,7 @@ export default SectionTitle
 const Container = styled.h2`
 font-size: 3rem;
 margin: 10px 0;
-font-weight: 800;
+font-weight: ${props => props.fontWeight ? props.fontWeight : "800"};
 text-align: ${props => props.align ? props.align : "left"};
 color: ${props => props.backGround === "dark" ? "var(--white)" : "var(--darkGrey)"}; 
 `

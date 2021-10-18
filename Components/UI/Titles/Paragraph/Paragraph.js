@@ -30,7 +30,7 @@ const Container = styled.p`
 position: relative;
     margin: 0;
     font-weight: ${props => props.fontWeight ? props.fontWeight : "400"};
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: ${props => props.align ? props.align : "left"};
     color: ${props => props.color ? props.color : "var(--darkGrey)"}
 

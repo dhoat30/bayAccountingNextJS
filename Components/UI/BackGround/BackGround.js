@@ -28,6 +28,12 @@ position: absolute;
 z-index: -1;
 left: -150px;
  top: -150px;
+ @media (max-width: 1000px){ 
+    width: 200px;
+height: 200px;
+left: -100px;
+ top: -100px;
+ }
 `
 const GreenTransparentTriangle = styled(GreenTriangle)`
     width: 400px;
@@ -36,4 +42,10 @@ const GreenTransparentTriangle = styled(GreenTriangle)`
     top: -200px;
     background: rgba(46,94,55,.5);
     z-index:-2;
+    @media (max-width: 1000px){ 
+    width: 250px;
+height: 250px;
+left: -125px;
+ top: -125px;
+ }
 `
