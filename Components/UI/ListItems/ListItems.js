@@ -3,16 +3,17 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/pro-light-svg-icons'
 
-function ListItems({ listContent }) {
+function ListItems({ listContent, showDots }) {
     return (
-        <ListContainer>
-            <List> <IconStyle icon={faCheckCircle} /> {listContent}</List>
+        <ListContainer showDots={showDots}>
+            <List>  <IconStyle icon={faCheckCircle} />  {listContent}</List>
         </ListContainer>
     )
 }
 
 export default ListItems
 const ListContainer = styled.ul`
+list-style-type: circle !important;
 `
 const List = styled.li`
 font-size: 1.2rem; 

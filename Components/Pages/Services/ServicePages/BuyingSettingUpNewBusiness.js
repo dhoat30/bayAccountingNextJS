@@ -3,13 +3,12 @@ import HeroImage from '../../../UI/Hero/HeroImage'
 import styled from 'styled-components'
 import OurTechnologyPartners from '../../../OurTechnologyPartners/OurTechnologyPartners'
 import SectionTitle from '../../../UI/Titles/Titles/SectionTitle'
-import Paragraph from '../../../UI/Titles/Paragraph/Paragraph'
 import Sidebar from '../../../UI/Sidebar/Sidebar'
 import ListItems from '../../../UI/ListItems/ListItems'
-function GSTPayroll({ heroImageData, servicesData, technologyPartnersData }) {
+function BuyingSettingUpNewBusiness({ heroImageData, servicesData, technologyPartnersData }) {
     // getting the current page service 
     const singleServiceData = servicesData.filter(item => {
-        return item.slug.includes("gst")
+        return item.slug.includes("new-business")
     })
 
     // service list data
@@ -20,15 +19,10 @@ function GSTPayroll({ heroImageData, servicesData, technologyPartnersData }) {
             id: item.id
         }
     })
-    console.log(singleServiceData[0].acf)
-    // list items cards 
-    const helpCards = singleServiceData[0].acf.flexible_content[1].list_items.map((item, index) => {
-        return (
-            <ListItems listContent={item.list_item} key={index} />
-        )
-    })
 
-    const gstCards = singleServiceData[0].acf.flexible_content[3].list_items.map((item, index) => {
+    console.log(singleServiceData[0].acf)
+    // // list items cards 
+    const helpCards = singleServiceData[0].acf.flexible_content[0].list_items.map((item, index) => {
         return (
             <ListItems listContent={item.list_item} key={index} />
         )
@@ -40,25 +34,10 @@ function GSTPayroll({ heroImageData, servicesData, technologyPartnersData }) {
             <HeroImage images={heroImageData} smallHeight={true} />
             <FlexBox>
                 <Content>
-                    <PayrollContainer>
+                    <FirstContainer>
                         <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[0].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[0].content}</Paragraph>
-                    </PayrollContainer>
-
-                    <ListContainer>
-                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[1].title}</SectionTitle>
                         {helpCards}
-                    </ListContainer>
-
-                    <PayrollContainer>
-                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[2].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[2].content}</Paragraph>
-                    </PayrollContainer>
-
-                    <ListContainer>
-                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[3].title}</SectionTitle>
-                        {gstCards}
-                    </ListContainer>
+                    </FirstContainer>
 
                 </Content>
                 <SideBarContainer>
@@ -73,17 +52,18 @@ function GSTPayroll({ heroImageData, servicesData, technologyPartnersData }) {
     )
 }
 
-export default GSTPayroll
+export default BuyingSettingUpNewBusiness
 
 const FlexBox = styled.section`
 max-width: 1500px; 
 padding: 0 20px ;
 margin: 0 auto;
 display:flex; 
-justify-content: space-between;
 @media (max-width: 400px ){ 
         padding: 0 10px;
     }
+
+justify-content: space-between;
 `
 const Content = styled.div`
 width: 100%;
@@ -98,14 +78,9 @@ const SideBarContainer = styled.section`
         display: none;
     }
 `
-const PayrollContainer = styled.div`
+const FirstContainer = styled.div`
 margin-top: 100px;
 `
-
-const ListContainer = styled.div`
-margin-top: 100px;
-`
-
 const TechnologyContainer = styled.div`
 margin: 100px auto;
 max-width: 1500px;

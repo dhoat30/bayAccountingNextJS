@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/pro-light-svg-icons'
 import Link from 'next/link'
 function ServiceList({ servicesListData }) {
-    console.log(servicesListData)
     const listCards = servicesListData.map(item => {
         return (
             <List key={item.id}>

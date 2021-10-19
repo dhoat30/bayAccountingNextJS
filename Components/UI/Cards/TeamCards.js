@@ -13,9 +13,11 @@ function TeamCards({ name, jobTitle, image, email }) {
             <Paragraph align="center">{jobTitle}</Paragraph>
             <EmailContainer>
                 <Image src="/triangle.png" alt="UI Triangle" layout="fixed" width={120} height={120} />
-                <a href={`mailto:${email}`} target="_blank">
+
+                <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
                     <IconStyle icon={faEnvelope} />
                 </a>
+
             </EmailContainer>
         </Container>
     )

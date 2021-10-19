@@ -17,7 +17,7 @@ function Layout(props) {
                 }
             })
             .catch(err => console.log(err))
-    }, [])
+    })
     return (
         <div>
             <Header></Header>

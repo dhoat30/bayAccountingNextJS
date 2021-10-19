@@ -4,32 +4,12 @@ import styled from 'styled-components'
 import OurTechnologyPartners from '../../../OurTechnologyPartners/OurTechnologyPartners'
 import SectionTitle from '../../../UI/Titles/Titles/SectionTitle'
 import Paragraph from '../../../UI/Titles/Paragraph/Paragraph'
-import Accordion from '../../../UI/Accordion/Accordion'
 import Sidebar from '../../../UI/Sidebar/Sidebar'
-function Taxation({ heroImageData, servicesData, technologyPartnersData }) {
+import ListItems from '../../../UI/ListItems/ListItems'
+function PropertyInvestmentDevelopment({ heroImageData, servicesData, technologyPartnersData }) {
     // getting the current page service 
     const singleServiceData = servicesData.filter(item => {
-        return item.slug.includes("taxation")
-    })
-    // accordion
-    const accordionCards = singleServiceData[0].acf.flexible_content[1].accordion.map((item, index) => {
-        return (
-            <Accordion
-                key={index}
-                title={item.title}
-                content={item.content}
-            />
-        )
-    })
-    // accordion
-    const taxShieldAccordion = singleServiceData[0].acf.flexible_content[2].accordion.map((item, index) => {
-        return (
-            <Accordion
-                key={index}
-                title={item.title}
-                content={item.content}
-            />
-        )
+        return item.slug.includes("investment")
     })
 
     // service list data
@@ -40,36 +20,55 @@ function Taxation({ heroImageData, servicesData, technologyPartnersData }) {
             id: item.id
         }
     })
+    console.log(singleServiceData[0].acf)
+    // list items cards 
+    const helpCards = singleServiceData[0].acf.flexible_content[1].list_items.map((item, index) => {
+        return (
+            <ListItems listContent={item.list_item} key={index} />
+        )
+    })
+
+    // list items cards 
+    const investerCards = singleServiceData[0].acf.flexible_content[2].list_items.map((item, index) => {
+        return (
+            <ListItems listContent={item.list_item} key={index} showDots={true} />
+        )
+    })
+
+    // list items cards 
+    const strategyCards = singleServiceData[0].acf.flexible_content[3].list_items.map((item, index) => {
+        return (
+            <ListItems listContent={item.list_item} key={index} showDots={true} />
+        )
+    })
+
     return (
         <div>
             <HeroImage images={heroImageData} smallHeight={true} />
             <FlexBox>
                 <Content>
-                    <TaxationContainer>
+                    <PayrollContainer>
                         <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[0].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[0].content}</Paragraph>
-                    </TaxationContainer>
+                        <Paragraph setDangerHtml={true}>{singleServiceData[0].acf.flexible_content[0].content}</Paragraph>
+                    </PayrollContainer>
 
-                    <TaxAuditContainer>
+                    <ListContainer>
                         <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[1].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[1].content}</Paragraph>
+                        {helpCards}
+                    </ListContainer>
 
-                        <AccordionContainer>
-                            {accordionCards}
-                        </AccordionContainer>
-                    </TaxAuditContainer>
+                    <ListContainer>
+                        <SectionTitle fontWeight="600">{singleServiceData[0].acf.flexible_content[2].title}</SectionTitle>
+                        {investerCards}
+                    </ListContainer>
 
-
-                    <AuditShieldContainer>
-                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[2].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[2].content}</Paragraph>
-
-                        <AccordionContainer>
-                            {taxShieldAccordion}
-                        </AccordionContainer>
-                    </AuditShieldContainer>
-
+                    <ListContainer>
+                        <SectionTitle fontWeight="600">{singleServiceData[0].acf.flexible_content[3].title}</SectionTitle>
+                        {strategyCards}
+                    </ListContainer>
                 </Content>
+
+
                 <SideBarContainer>
                     <Sidebar servicesListData={servicesListData} />
                 </SideBarContainer>
@@ -82,17 +81,17 @@ function Taxation({ heroImageData, servicesData, technologyPartnersData }) {
     )
 }
 
-export default Taxation
+export default PropertyInvestmentDevelopment
+
 const FlexBox = styled.section`
 max-width: 1500px; 
 padding: 0 20px ;
 margin: 0 auto;
 display:flex; 
+justify-content: space-between;
 @media (max-width: 400px ){ 
         padding: 0 10px;
     }
-
-justify-content: space-between;
 `
 const Content = styled.div`
 width: 100%;
@@ -107,12 +106,12 @@ const SideBarContainer = styled.section`
         display: none;
     }
 `
-const TaxationContainer = styled.div`
+const PayrollContainer = styled.div`
 margin-top: 100px;
 `
 
-const TaxAuditContainer = styled.div`
-margin-top: 100px;
+const ListContainer = styled.div`
+margin-top: 50px;
 `
 
 const AccordionContainer = styled.div`

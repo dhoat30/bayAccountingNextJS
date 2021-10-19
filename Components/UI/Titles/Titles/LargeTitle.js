@@ -4,8 +4,8 @@ function LargeTitle(props) {
 
     return (
         <Container
+            dangerouslySetInnerHTML={{ __html: props.children }}
             className={props.className} align={props.align} color={props.color}>
-            {props.children}
         </Container>
     )
 }

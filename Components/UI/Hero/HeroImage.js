@@ -17,7 +17,7 @@ function HeroImage({ images, subtitle, smallHeight }) {
             }
             <Content>
                 <Subtitle>{subtitle}</Subtitle>
-                <LargeTitle align="center" color="var(--white)">{images.title} </LargeTitle>
+                <LargeTitle align="center" color="var(--white)">{images.title}</LargeTitle>
             </Content>
             <BackDrop />
         </Container>

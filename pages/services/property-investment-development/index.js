@@ -1,26 +1,30 @@
 import Head from 'next/head'
 import React from 'react'
-import BudgetCashFlow from '../../../Components/Pages/Services/ServicePages/BudgetCashFlow'
 import getHeroImageData from '../../../util/get-hero-image-data'
 import getServices from '../../../util/get-services'
 import getTechnologyPartners from '../../../util/get-technology-parnters'
+import BuyingSettingUpNewBusiness from '../../../Components/Pages/Services/ServicePages/BuyingSettingUpNewBusiness'
+import PropertyInvestmentDevelopment from '../../../Components/Pages/Services/ServicePages/PropertyInvestmentDevlopment'
 
-export default function BudgetCashFlowPage(props) {
+export default function PropertyInvestmentDevelopmentPage(props) {
+
     return (
         < React.Fragment >
             <Head>
             </Head>
-            <BudgetCashFlow
+            <PropertyInvestmentDevelopment
                 heroImageData={props.heroImageData}
                 servicesData={props.servicesData}
                 technologyPartnersData={props.technologyPartnersData}
             />
+
         </React.Fragment >
     )
 }
+
 export async function getStaticProps(context) {
     // get home page data using category from hero images 
-    const heroImageData = await getHeroImageData('budget-cash-flow')
+    const heroImageData = await getHeroImageData('property-investment-development')
     const servicesData = await getServices()
     const technologyPartnersData = await getTechnologyPartners()
 

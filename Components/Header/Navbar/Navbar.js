@@ -50,13 +50,13 @@ function NavbarComponent() {
                             <Link href="/services/taxation" passHref>
                                 <NavDropdown.Item>Taxation</NavDropdown.Item>
                             </Link>
-                            <Link href="/services/gst-payroll" passHref>
+                            <Link href="/services/gst-payroll-services-including-software-training" passHref>
                                 <NavDropdown.Item>GST Payroll</NavDropdown.Item>
                             </Link>
                             <Link href="/services/budget-cashflow-forecast" passHref>
                                 <NavDropdown.Item>Budget/Cashflow Forecast</NavDropdown.Item>
                             </Link>
-                            <Link href="/services/buying-setting-up-of-new-business" passHref>
+                            <Link href="/services/buying-setting-up-new-business" passHref>
                                 <NavDropdown.Item>Buying Setting Up Of New Business</NavDropdown.Item>
                             </Link>
                             <Link href="/services/property-investment-development" passHref>
