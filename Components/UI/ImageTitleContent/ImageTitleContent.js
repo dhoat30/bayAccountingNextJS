@@ -3,7 +3,17 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import SectionTitle from '../Titles/Titles/SectionTitle'
 import Paragraph from '../Titles/Paragraph/Paragraph'
-function ImageTitleContent({ image, title, content }) {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/pro-solid-svg-icons'
+
+function ImageTitleContent({ image, title, content, listItems }) {
+    const listItemsCard = listItems ? listItems.map((item, index) => {
+        return (
+            <List key={index}>
+                <IconStyle icon={faCheck} />
+                {item.list_item} </List>
+        )
+    }) : null
     return (
         <Container>
             <ImageContainer>
@@ -11,9 +21,12 @@ function ImageTitleContent({ image, title, content }) {
                     alt={title}
                     layout="fill" />
             </ImageContainer>
-            <Content>
+            <Content >
                 <SectionTitleStyle fontWeight="600">{title} </SectionTitleStyle>
-                <Paragraph>{content} </Paragraph>
+                <Paragraph setDangerHtml={true}>{content}</Paragraph>
+                <ListContainer>
+                    {listItemsCard}
+                </ListContainer>
             </Content>
         </Container>
     )
@@ -50,4 +63,14 @@ width: 48%;
 `
 const SectionTitleStyle = styled(SectionTitle)`
 margin-top: 0;
+`
+const ListContainer = styled.ul`
+margin: 20px 0 0 0; 
+`
+const List = styled.li`
+font-size: 1.3rem; 
+`
+const IconStyle = styled(FontAwesomeIcon)`
+margin-right: 15px;
+color: var(--orange); 
 `

@@ -67,7 +67,7 @@ padding: 10px 20px;
 cursor: pointer;
 position: relative;
 z-index: 2;
-min-height: 320px;
+min-height: 360px;
 background-repeat: no-repeat;
 background-size: cover;
 

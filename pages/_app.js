@@ -4,14 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import '../Components/Layout.css'
 import Head from 'next/head'
-import TagManager from 'react-gtm-module';
 import { ContactInfoContextProvider } from '../store/contact-info-context'
 import { HeroImageContextProvider } from '../store/hero-image-context';
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-PS7XFHN' });
-  }, []);
+
   return (
     <React.Fragment>
       <ContactInfoContextProvider>

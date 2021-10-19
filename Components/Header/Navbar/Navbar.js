@@ -65,14 +65,12 @@ function NavbarComponent() {
                         </NavDropdown>
 
                         <NavDropdown title="Client Resources" >
-                            <Link href="/about-us" passHref>
+                            <Link href="/client-resources/questionnaire" passHref>
                                 <NavDropdown.Item>Questionnaire</NavDropdown.Item>
                             </Link>
 
                         </NavDropdown>
-                        <Link href="/client-resources" passHref>
-                            <Nav.Link >Client Resources</Nav.Link>
-                        </Link>
+
                         <Link href="/news" passHref>
                             <Nav.Link >News</Nav.Link>
                         </Link>

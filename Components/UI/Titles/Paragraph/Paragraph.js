@@ -26,7 +26,7 @@ function Paragraph(props) {
 
 export default Paragraph
 
-const Container = styled.p`
+const Container = styled.div`
 position: relative;
     margin: 0;
     font-weight: ${props => props.fontWeight ? props.fontWeight : "400"};

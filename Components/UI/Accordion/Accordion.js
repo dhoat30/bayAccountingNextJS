@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/pro-light-svg-icons'
 
-function Accordion({ title, content }) {
+function Accordion({ title, content, setDangerHtml }) {
     const [showContent, setShowContent] = useState(false)
     return (
         <Container bkColor={showContent}>
@@ -17,7 +17,7 @@ function Accordion({ title, content }) {
                 }
             </FlexBox>
             {showContent &&
-                <ParagraphStyle color="var(--white)">{content}</ParagraphStyle>}
+                <ParagraphStyle setDangerHtml={setDangerHtml} color="var(--white)">{content}</ParagraphStyle>}
         </Container>
     )
 }
@@ -36,8 +36,12 @@ const IconStyle = styled(FontAwesomeIcon)`
 `
 const ParagraphStyle = styled(Paragraph)`
     margin-top: 5px;
+   
 `
 const ColumnTitleStyle = styled(ColumnTitle)`
+ @media (max-width: 500px){ 
+        font-size: 1.2rem;
+    }
 color: ${props => props.titlecolor ? "var(--white)" : "var(--darkGrey) "};
 `
 

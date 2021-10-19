@@ -1,26 +1,27 @@
+import cookie from 'cookie'
 import Head from 'next/head'
-import React, { useContext, useEffect } from 'react'
-import HomePage from '../../../Components/Pages/Home/Home'
-import AllServices from '../../../Components/Pages/Services/AllServices'
-import Taxation from '../../../Components/Pages/Services/ServicePages/Taxation'
-import getHeroImageData from '../../../util/get-hero-image-data'
-import getServices from '../../../util/get-services'
-import getTeamMembers from '../../../util/get-team-members'
-import getTechnologyPartners from '../../../util/get-technology-parnters'
-import getTestimonials from '../../../util/get-testimonials'
-
-export default function TaxationPage(props) {
+import React from 'react'
+import Questionnaire from '../../Components/Pages/Home/ClientResources/Questionnaire'
+import MeetOurTeam from '../../Components/Pages/MeetOurTeam/MeetOurTeam'
+import getHeroImageData from '../../util/get-hero-image-data'
+import getTeamMembers from '../../util/get-team-members'
+import getTechnologyPartners from '../../util/get-technology-parnters'
+import getQuestionnaireData from '../../util/get-questionnaire-data'
+import getPage from '../../util/get-page'
+export default function QuestionnairePage(props) {
     console.log(props)
     return (
         < React.Fragment >
             <Head>
                 <title>Inspiry | Live an Inspired Life | Find Trade Professionals and Projects</title>
             </Head>
-            <Taxation
+            <Questionnaire
                 heroImageData={props.heroImageData}
-                servicesData={props.servicesData}
+                questionnaireData={props.questionnaireData}
                 technologyPartnersData={props.technologyPartnersData}
+                pageData={props.pageData}
             />
+
 
         </React.Fragment >
     )
@@ -28,10 +29,10 @@ export default function TaxationPage(props) {
 
 export async function getStaticProps(context) {
     // get home page data using category from hero images 
-    const heroImageData = await getHeroImageData('taxation')
-    const servicesData = await getServices()
+    const heroImageData = await getHeroImageData("questionnaire")
+    const questionnaireData = await getQuestionnaireData()
     const technologyPartnersData = await getTechnologyPartners()
-
+    const pageData = await getPage("questionnaire")
     return {
         props: {
             heroImageData: {
@@ -41,9 +42,9 @@ export async function getStaticProps(context) {
                 },
                 title: heroImageData[0].title,
             },
-            servicesData: servicesData,
+            questionnaireData: questionnaireData,
             technologyPartnersData: technologyPartnersData,
-
+            pageData: pageData
         },
         revalidate: 10
     }
