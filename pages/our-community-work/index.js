@@ -9,17 +9,12 @@ export default function OurCommunityWorkPage(props) {
   return (
     < React.Fragment >
       <Head>
-        <title>Inspiry | Live an Inspired Life | Find Trade Professionals and Projects</title>
+        <title>Bay Accounting | Accounting Services</title>
       </Head>
       <OurCommunityWork
         heroImageData={props.heroImageData}
         communityWorkData={props.communityWorkData}
       />
-      {/* <MeetOurTeam
-        heroImageData={props.heroImageData}
-        teamMembersData={props.teamMembersData}
-        technologyPartnersData={props.technologyPartnersData}
-      /> */}
 
     </React.Fragment >
   )

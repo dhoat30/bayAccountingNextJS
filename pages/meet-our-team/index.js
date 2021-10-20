@@ -11,7 +11,7 @@ export default function Home(props) {
   return (
     < React.Fragment >
       <Head>
-        <title>Inspiry | Live an Inspired Life | Find Trade Professionals and Projects</title>
+        <title>Bay Accounting | Accounting Services</title>
       </Head>
       <MeetOurTeam
         heroImageData={props.heroImageData}

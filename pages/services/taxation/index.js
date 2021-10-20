@@ -14,7 +14,7 @@ export default function TaxationPage(props) {
     return (
         < React.Fragment >
             <Head>
-                <title>Inspiry | Live an Inspired Life | Find Trade Professionals and Projects</title>
+                <title>Bay Accounting | Accounting Services</title>
             </Head>
             <Taxation
                 heroImageData={props.heroImageData}
