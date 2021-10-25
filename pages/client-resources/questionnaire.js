@@ -46,7 +46,7 @@ export async function getStaticProps(context) {
             technologyPartnersData: technologyPartnersData,
             pageData: pageData
         },
-        revalidate: 10
+        revalidate: 86400
     }
 
 

@@ -36,7 +36,7 @@ export async function getStaticProps(context) {
       communityWorkData: communityWorkData,
 
     },
-    revalidate: 10
+    revalidate: 86400
   }
 
 
