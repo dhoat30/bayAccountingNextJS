@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import BackGround from '../../UI/BackGround/BackGround'
 import HeroImage from '../../UI/Hero/HeroImage'
 import SectionTitle from '../../UI/Titles/Titles/SectionTitle'
 import styled from 'styled-components'
 import ServiceCard from '../../UI/Cards/ServiceCard'
+
 function OurCommunityWork({ heroImageData, communityWorkData, }) {
 
     const serviceCard = communityWorkData.map(item => {

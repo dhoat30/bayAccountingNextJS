@@ -1,11 +1,16 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Header from './Header/Header'
 import axios from 'axios'
 import styled from 'styled-components'
 import ContactInfoContext from '../store/contact-info-context'
 import FooterSection from './FooterSection/FooterSection'
+import LoadingOverlay from './UI/LoadingOverlay/LoadingOverlay'
+import LoadingContext from '../store/loading-context'
+
 function Layout(props) {
     const contactInfoCtx = useContext(ContactInfoContext)
+    const loadingCtx = useContext(LoadingContext)
+
     useEffect(() => {
         axios(`/api/contact-info`)
             .then(res => {
@@ -21,7 +26,10 @@ function Layout(props) {
     return (
         <div>
             <Header></Header>
-            <Main>{props.children}</Main>
+            <Main>{props.children}
+                <LoadingOverlay show={loadingCtx.loadingOverlay} />
+            </Main>
+
             <FooterSection />
         </div>
     )
@@ -30,4 +38,5 @@ function Layout(props) {
 export default Layout
 const Main = styled.section`
 min-height: 90vh;
+position: relative;
 `

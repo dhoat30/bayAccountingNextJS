@@ -4,11 +4,11 @@ module.exports = (phase) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
       env: {
-        url: "http://localhost/bay-accounting"
+        url: "https://bayaccounting.co.nz"
       },
       reactStrictMode: true,
       images: {
-        domains: ['localhost']
+        domains: ['bayaccounting.co.nz']
       }
     }
   }

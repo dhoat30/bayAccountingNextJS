@@ -1,11 +1,12 @@
 import cookie from 'cookie'
 import Head from 'next/head'
-import React from 'react'
+import React, { useContext } from 'react'
 import OurCommunityWork from '../../Components/Pages/OurCommunityWork/OurCommunityWork'
 import getCommunityWork from '../../util/get-community-work'
 import getHeroImageData from '../../util/get-hero-image-data'
 
 export default function OurCommunityWorkPage(props) {
+
   return (
     < React.Fragment >
       <Head>

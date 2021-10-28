@@ -1,13 +1,13 @@
 import cookie from 'cookie'
 import Head from 'next/head'
-import React from 'react'
+import React, { useContext } from 'react'
 import MeetOurTeam from '../../Components/Pages/MeetOurTeam/MeetOurTeam'
 import getHeroImageData from '../../util/get-hero-image-data'
 import getTeamMembers from '../../util/get-team-members'
 import getTechnologyPartners from '../../util/get-technology-parnters'
-
 export default function Home(props) {
   console.log(props)
+
   return (
     < React.Fragment >
       <Head>

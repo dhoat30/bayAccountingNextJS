@@ -38,6 +38,6 @@ justify-content: center;
 align-items: center;
 `
 const IconStyle = styled(FontAwesomeIcon)`
-color: var(--darkGrey);
+color: var(--darkGreen);
 position: absolute;
 `

@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useContext } from 'react'
 import getHeroImageData from '../../util/get-hero-image-data'
 import getTechnologyPartners from '../../util/get-technology-parnters'
 import AboutUs from '../../Components/Pages/AboutUs/AboutUs'
 import getPage from '../../util/get-page'
 
 export default function AboutUsPage(props) {
-    console.log(props)
+
     return (
         < React.Fragment >
             <Head>
