@@ -6,7 +6,7 @@ import getTechnologyPartners from '../../../util/get-technology-parnters'
 import GSTPayroll from '../../../Components/Pages/Services/ServicePages/GSTPayroll'
 import BusinessAdvisory from '../../../Components/Pages/Services/ServicePages/BusinessAdvisory'
 
-export default function BusinessAdvisoryPage(props) {
+export default function AccountingServicesPage(props) {
 
     return (
         < React.Fragment >
@@ -23,7 +23,7 @@ export default function BusinessAdvisoryPage(props) {
 
 export async function getStaticProps(context) {
     // get home page data using category from hero images 
-    const heroImageData = await getHeroImageData('business-advisory')
+    const heroImageData = await getHeroImageData('accounting-services')
     const servicesData = await getServices()
     const technologyPartnersData = await getTechnologyPartners()
 

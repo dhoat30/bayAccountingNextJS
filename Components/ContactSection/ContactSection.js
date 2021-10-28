@@ -10,10 +10,19 @@ function ContactSection() {
     if (!contactInfoCtx.contactData) {
         return null
     }
-    console.log("hello this is contact section")
+    const siteImageCard = contactInfoCtx.contactData.map(item => {
+        return (
+            <ImageDiv key={item.id}>
+                <Iframe src={item.acf.map} allowFullScreen="" loading="lazy"></Iframe>
+            </ImageDiv>
+
+        )
+    })
+
     return (
         <Container>
             <MapContainer>
+                {siteImageCard}
             </MapContainer>
             <ContactContainer>
 
@@ -32,7 +41,7 @@ max-width: 1000px;
 margin: 150px auto 100px auto;
 display: flex;
 justify-content: space-between;
-align-items: center;
+align-items: flex-end;
 flex-wrap: wrap-reverse;
 `
 const ContactContainer = styled.div`
@@ -81,4 +90,9 @@ const ImageStyle = styled(Image)`
 const ImageDiv = styled.div`
 
 margin: 10px 0;
+`
+const Iframe = styled.iframe`
+    width: 100%;
+    height: 300px;
+    box-shadow: var(--boxShadow);
 `

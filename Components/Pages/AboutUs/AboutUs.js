@@ -3,19 +3,20 @@ import OurTechnologyPartners from '../../OurTechnologyPartners/OurTechnologyPart
 import styled from 'styled-components'
 import HeroImage from '../../UI/Hero/HeroImage'
 import ImageTitleContent from '../../UI/ImageTitleContent/ImageTitleContent'
-function AboutUs({ heroImageData, pageData, technologyPartnersData }) {
-    console.log(pageData[0].acf.image)
+import TeamMembers from '../Home/TeamMembers/TeamMembers'
+function AboutUs({ heroImageData, pageData, technologyPartnersData, teamMembersData }) {
+    console.log(teamMembersData)
     return (
         <div>
             <HeroImage images={heroImageData} smallHeight={true} />
             <MainContent>
                 <ImageTitleContent
-                    image={pageData[0].acf.image}
                     title={pageData[0].title.rendered}
                     content={pageData[0].acf.content}
                     listItems={pageData[0].acf.list_items}
                 />
             </MainContent>
+            <TeamMembers teamMembersData={teamMembersData} />
             <TechnologyContainer>
                 <OurTechnologyPartners technologyPartnersData={technologyPartnersData} />
             </TechnologyContainer>
@@ -25,7 +26,7 @@ function AboutUs({ heroImageData, pageData, technologyPartnersData }) {
 
 export default AboutUs
 const MainContent = styled.section`
-margin: 100px auto;
+margin: 50px auto;
 max-width: 1500px;
 padding: 0 20px;
 @media (max-width: 400px ){ 

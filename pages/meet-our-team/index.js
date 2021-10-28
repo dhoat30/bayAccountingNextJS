@@ -6,7 +6,6 @@ import getHeroImageData from '../../util/get-hero-image-data'
 import getTeamMembers from '../../util/get-team-members'
 import getTechnologyPartners from '../../util/get-technology-parnters'
 export default function Home(props) {
-  console.log(props)
 
   return (
     < React.Fragment >

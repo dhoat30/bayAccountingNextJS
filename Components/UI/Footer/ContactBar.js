@@ -4,7 +4,7 @@ import { faPhoneAlt, faEnvelope, faMapMarkerAlt, faClock } from '@fortawesome/pr
 import styled from 'styled-components'
 import ColumnTitle from '../Titles/Titles/ColumnTitle'
 
-function ContactBar({ title, phoneNumber, email, streetAddress, city, openingHours }) {
+function ContactBar({ title, phoneNumber, email, streetAddress, city, openingHours, daysOpen }) {
     return (
         <Container>
             <ColumnTitle color="white">{title}</ColumnTitle>
@@ -40,6 +40,7 @@ function ContactBar({ title, phoneNumber, email, streetAddress, city, openingHou
                             <IconStyle icon={faClock} />
                         </IconContainer>
                         Opening Hours <br></br>
+                        {daysOpen}<br></br>
                         {openingHours}
                     </Anchor>
                 </Link>
@@ -68,7 +69,6 @@ const IconStyle = styled(FontAwesomeIcon)`
 const Anchor = styled.a`
 line-height: 1.5rem;
 display: flex; 
-align-items: center;
 text-decoration: none ;
 color: var(--lightBlue);
 font-size: 1.2rem;

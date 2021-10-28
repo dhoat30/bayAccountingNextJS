@@ -38,7 +38,6 @@ function Footer() {
 
     let tePunaContact = contactInfoCtx.contactData.filter(item => item.slug.includes("te-puna"))
     let tePukeContact = contactInfoCtx.contactData.filter(item => item.slug.includes("te-puke"))
-
     return (
         <Container>
             <Content>
@@ -56,6 +55,7 @@ function Footer() {
                             streetAddress={tePunaContact[0].acf.street_address}
                             city={tePunaContact[0].acf.towncity}
                             openingHours={tePunaContact[0].acf.opening_hours}
+                            daysOpen={tePunaContact[0].acf.days_open}
                         />
                     </FlexItem>
 
@@ -67,6 +67,7 @@ function Footer() {
                             streetAddress={tePukeContact[0].acf.street_address}
                             city={tePukeContact[0].acf.towncity}
                             openingHours={tePukeContact[0].acf.opening_hours}
+                            daysOpen={tePukeContact[0].acf.days_open}
                         />
                     </FlexItem>
 

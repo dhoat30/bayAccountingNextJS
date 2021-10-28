@@ -15,12 +15,14 @@ function ImageTitleContent({ image, title, content, listItems }) {
         )
     }) : null
     return (
-        <Container>
-            <ImageContainer>
-                <ImageStyle src={image}
-                    alt={title}
-                    layout="fill" />
-            </ImageContainer>
+        <Container image={image}>
+            {image &&
+                <ImageContainer>
+                    <ImageStyle src={image}
+                        alt={title}
+                        layout="fill" />
+                </ImageContainer>
+            }
             <Content >
                 <SectionTitleStyle fontWeight="600">{title} </SectionTitleStyle>
                 <Paragraph setDangerHtml={true}>{content}</Paragraph>
@@ -35,7 +37,7 @@ function ImageTitleContent({ image, title, content, listItems }) {
 export default ImageTitleContent
 const Container = styled.div`
 display: flex;
-justify-content: space-between;
+justify-content: ${props => props.image ? "space-between" : "center"} ;
 flex-wrap: wrap-reverse;
 `
 const ImageContainer = styled.div`

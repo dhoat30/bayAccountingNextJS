@@ -9,7 +9,7 @@ import ListItems from '../../../UI/ListItems/ListItems'
 function BusinessAdvisory({ heroImageData, servicesData, technologyPartnersData }) {
     // getting the current page service 
     const singleServiceData = servicesData.filter(item => {
-        return item.slug.includes("business-advisory")
+        return item.slug.includes("accounting-services")
     })
 
     // service list data

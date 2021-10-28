@@ -20,7 +20,7 @@ function Partners({ tmnzPartners }) {
     })
     return (
         <Container>
-            <ColumnTitle color="white">TMNZ Partners</ColumnTitle>
+            <ColumnTitle color="white">Our Tax Partners</ColumnTitle>
             <div>
                 {partnerImageCard}
             </div>

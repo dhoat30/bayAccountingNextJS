@@ -28,21 +28,21 @@ function NavbarComponent() {
                             <Nav.Link >Home</Nav.Link>
                         </Link>
 
-                        <NavDropdown title="About" >
+                        <NavDropdown title="About Us" >
                             <Link href="/about-us" passHref >
-                                <NavDropdown.Item >About Us</NavDropdown.Item>
+                                <NavDropdown.Item >Our History</NavDropdown.Item>
                             </Link>
                             <Link href="/meet-our-team" passHref>
                                 <NavDropdown.Item >Meat Our Team</NavDropdown.Item>
                             </Link>
 
                         </NavDropdown>
-                        <NavDropdown title="Services" >
+                        <NavDropdown title="Our Services" >
                             <Link href="/services" passHref>
                                 <NavDropdown.Item >All Services</NavDropdown.Item>
                             </Link>
-                            <Link href="/services/business-advisory" passHref>
-                                <NavDropdown.Item >Business Advisory</NavDropdown.Item>
+                            <Link href="/services/accounting-services" passHref>
+                                <NavDropdown.Item >Accounting Services</NavDropdown.Item>
                             </Link>
                             <Link href="/services/taxation" passHref>
                                 <NavDropdown.Item >Taxation</NavDropdown.Item>

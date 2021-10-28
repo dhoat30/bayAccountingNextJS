@@ -6,7 +6,7 @@ import LargeTitle from '../Titles/Titles/LargeTitle'
 
 function HeroImage({ images, subtitle, smallHeight }) {
     const isMobile = useMediaQuery({
-        query: '(min-width: 700px)'
+        query: '(max-width: 700px)'
     })
 
     return (
