@@ -13,7 +13,7 @@ function Home({ imageData, servicesData, teamMembersData, technologyPartnersData
             <ServicesSection servicesData={servicesData} />
             <TeamMembers teamMembersData={teamMembersData} />
             <OurTechnologyPartners technologyPartnersData={technologyPartnersData} />
-            <Testimonials testimonialsData={testimonialsData} />
+            {/* <Testimonials testimonialsData={testimonialsData} /> */}
             <ContactSection />
         </div>
     )

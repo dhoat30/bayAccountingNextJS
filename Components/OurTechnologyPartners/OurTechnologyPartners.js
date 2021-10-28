@@ -12,7 +12,7 @@ function OurTechnologyPartners({ technologyPartnersData }) {
     })
     return (
         <Container>
-            <SectionTitle subtitle="tools" align="center">Our Technology Partners</SectionTitle>
+            <SectionTitle align="center">Our Technology Partners</SectionTitle>
             <CardsContainer>
                 {imageCards}
             </CardsContainer>

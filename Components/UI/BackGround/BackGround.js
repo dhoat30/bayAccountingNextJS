@@ -3,7 +3,6 @@ import styled from 'styled-components'
 function BackGround({ children }) {
     return (
         <Container style={{ backgroundImage: 'url("/lightBG.jpg")' }}>
-
             {children}
         </Container>
     )

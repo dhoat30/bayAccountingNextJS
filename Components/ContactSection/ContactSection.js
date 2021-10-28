@@ -10,27 +10,13 @@ function ContactSection() {
     if (!contactInfoCtx.contactData) {
         return null
     }
-
-    const siteImageCard = contactInfoCtx.contactData.map(item => {
-        return (
-            <ImageStyle
-                key={item.id}
-                src={item.acf.map}
-                alt={item.title.rendered}
-                width="100%"
-                height="60"
-                layout="responsive"
-            />
-        )
-    })
-
+    console.log("hello this is contact section")
     return (
         <Container>
             <MapContainer>
-                {siteImageCard}
             </MapContainer>
             <ContactContainer>
-                <Subtitle>Drop A Message</Subtitle>
+
                 <SectionTitle >Contact Us</SectionTitle>
                 <ContactForm emailRouteUrl={`${process.env.url}/wp-json/inspiry/v1/contact-email`} emailTo="dhoat30@gmail.com"></ContactForm>
             </ContactContainer>
@@ -43,7 +29,7 @@ const Container = styled.section`
 background: var(--offWhite);
 padding: 30px;
 max-width: 1000px;
-margin: -200px auto 100px auto;
+margin: 150px auto 100px auto;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -90,4 +76,9 @@ const ImageStyle = styled(Image)`
     margin: 10px 0 !important; 
     display: block;
     object-fit: cover;
+    
+`
+const ImageDiv = styled.div`
+
+margin: 10px 0;
 `

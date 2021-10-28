@@ -18,10 +18,10 @@ function ServicesSection({ servicesData }) {
     })
     return (
         <BackGround>
-            <ButtonContainer>
+            {/* <ButtonContainer>
                 <Button >Consult Now</Button>
                 <Button bkColor="var(--white)">Our Services</Button>
-            </ButtonContainer>
+            </ButtonContainer> */}
 
             <Container>
                 <SectionTitle subtitle="Our Services" align="center">We Provide Most Exclusive Services For Business</SectionTitle>

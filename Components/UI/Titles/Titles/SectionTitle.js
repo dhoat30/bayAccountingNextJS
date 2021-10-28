@@ -39,8 +39,9 @@ const Subtitle = styled.h3`
     display: inline-block !important;
     position: relative;
     margin: 0 auto;
+    font-weight: 600;
     color: var(--darkGreen);
-    font-size: 1.5rem;
+    font-size: 2rem;
     z-index: 2;
     left: 50%;
     transform: translate(-50%, 0);
@@ -51,7 +52,7 @@ const Subtitle = styled.h3`
         transform: translate(0, -50%);
         content: "";
         width: 30px;
-        height: 2px;
+        height: 3px;
         background: var(--darkGreen);
         z-index: -1;
     }
@@ -62,7 +63,7 @@ const Subtitle = styled.h3`
         transform: translate(0, -50%);
         content: "";
         width: 30px;
-        height: 2px;
+        height: 3px;
         background: var(--darkGreen);
         z-index: -1;
     }

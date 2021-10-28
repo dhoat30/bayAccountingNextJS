@@ -13,7 +13,7 @@ function NavbarComponent() {
     return (
         <React.Fragment>
             <NavbarStyle
-                expand="lg"
+                expand="xl"
                 collapseOnSelect
             >
 
@@ -80,6 +80,9 @@ function NavbarComponent() {
                         </Link>
                         <Link href="/pay-now" passHref>
                             <Nav.Link >Pay Now</Nav.Link>
+                        </Link>
+                        <Link href="#" passHref>
+                            <Nav.Link >Log in</Nav.Link>
                         </Link>
 
                     </Nav>

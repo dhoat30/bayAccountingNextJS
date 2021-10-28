@@ -197,7 +197,7 @@ a {
 .nav-item > a {
   margin: 0 0 0 20px;
 }
-@media (max-width: 990px) {
+@media (max-width: 1200px) {
   .navbar-toggler {
     margin-top: -40px;
   }
@@ -206,6 +206,26 @@ a {
   }
   .navbar-collapse {
     margin-top: -40px;
+  }
+  .navbar-nav {
+    background-color: white;
+    position: relative;
+    z-index: 100;
+    background-color: var(--darkGreen);
+  }
+  .dropdown-menu {
+    background-color: var(--lightGreen);
+  }
+  .dropdown-item {
+    color: white !important;
+  }
+  .nav-link {
+    margin: 0 !important;
+    padding: 10px 100px 10px 20px !important;
+    color: white !important;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
   }
 }
 
