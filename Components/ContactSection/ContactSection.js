@@ -27,7 +27,7 @@ function ContactSection() {
             <ContactContainer>
 
                 <SectionTitle >Contact Us</SectionTitle>
-                <ContactForm emailRouteUrl={`${process.env.url}/wp-json/inspiry/v1/contact-email`} emailTo="dhoat30@gmail.com"></ContactForm>
+                <ContactForm emailRouteUrl={`${process.env.url}/wp-json/inspiry/v1/contact-email`} emailTo={contactInfoCtx.contactData[0].acf.email}></ContactForm>
             </ContactContainer>
         </Container>
     )

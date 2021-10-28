@@ -20,7 +20,7 @@ export default TextArea
 const Container = styled.textarea`
     display: block;
     width: calc(100% - 2px);
-    height: 100px;
+    height: 170px;
     border: none;
     outline: none;
     margin: 10px 0 0 0;
