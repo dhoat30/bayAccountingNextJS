@@ -81,9 +81,9 @@ function NavbarComponent() {
                         <Link href="/pay-now" passHref>
                             <Nav.Link >Pay Now</Nav.Link>
                         </Link>
-                        <Link href="#" passHref>
+                        {/* <Link href="#" passHref>
                             <Nav.Link >Log in</Nav.Link>
-                        </Link>
+                        </Link> */}
 
                     </Nav>
                 </Navbar.Collapse>

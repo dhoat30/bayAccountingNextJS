@@ -11,8 +11,10 @@ function ContactSection() {
         return null
     }
     const siteImageCard = contactInfoCtx.contactData.map(item => {
+        console.log(item)
         return (
             <ImageDiv key={item.id}>
+                <LocationTitle>{item.slug === "te-puna-contact" ? "Te Puna" : "Te Puke"}</LocationTitle>
                 <Iframe src={item.acf.map} allowFullScreen="" loading="lazy"></Iframe>
             </ImageDiv>
 
@@ -95,4 +97,8 @@ const Iframe = styled.iframe`
     width: 100%;
     height: 300px;
     box-shadow: var(--boxShadow);
+`
+const LocationTitle = styled.h5`
+font-size: 1.5rem;
+font-weight: 700;
 `

@@ -21,10 +21,10 @@ function TopNavbar() {
     return (
         <Container>
             <Items>
-                <Item>
+                {/* <Item>
                     <IconStyle icon={faSignIn} />
                     <Link href="#">Log in</Link>
-                </Item>
+                </Item> */}
                 <Item>
                     <IconStyle icon={faPhoneAlt} />
                     <Link

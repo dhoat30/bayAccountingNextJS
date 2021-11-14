@@ -40,7 +40,7 @@ export async function getStaticProps(context) {
             },
             newsData: newsData,
         },
-        revalidate: 86400
+        revalidate: 10
     }
 
 

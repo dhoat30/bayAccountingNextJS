@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 function BackGround({ children }) {
     return (
-        <Container style={{ backgroundImage: 'url("/lightBG.jpg")' }}>
+        <Container>
             {children}
         </Container>
     )
@@ -16,6 +16,7 @@ padding: 50px 0;
 background-repeat: no-repeat;
 background-size: cover;
 z-index: 0;
+background: var(--offWhite); 
 `
 const GreenTriangle = styled.div`
 background-color: var(--darkGreen);
