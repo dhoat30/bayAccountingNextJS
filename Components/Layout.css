@@ -242,3 +242,8 @@ a {
 .image-title-content ul {
   margin-left: 20px;
 }
+
+/* policy page */
+.policy-page > div > ol > li {
+  margin: 20px 0 0 0;
+}
