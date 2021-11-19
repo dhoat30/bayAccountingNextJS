@@ -13,6 +13,7 @@ export default function Home(props) {
   return (
     < React.Fragment >
       <Head>
+        {/* add seo in here */}
         <title>Bay Accounting | Accounting Services</title>
       </Head>
       <HomePage
