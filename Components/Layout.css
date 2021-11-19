@@ -247,3 +247,12 @@ a {
 .policy-page > div > ol > li {
   margin: 20px 0 0 0;
 }
+
+/* pdf file  */
+.wp-block-file a {
+  color: white;
+  margin-right: 10px;
+}
+.wp-block-file a:hover {
+  color: rgb(228, 228, 228);
+}
