@@ -10,7 +10,7 @@ function MeetOurTeam({ heroImageData, teamMembersData, technologyPartnersData })
         <div>
             <HeroImage images={heroImageData} />
             <BackGround>
-                <TeamMembers teamMembersData={teamMembersData} />
+                {/* <TeamMembers teamMembersData={teamMembersData} /> */}
             </BackGround>
 
             <TechnologyContainer>

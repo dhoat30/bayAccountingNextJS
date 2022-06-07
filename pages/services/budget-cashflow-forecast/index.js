@@ -12,7 +12,7 @@ export default function BudgetCashFlowPage(props) {
             </Head>
             <BudgetCashFlow
                 heroImageData={props.heroImageData}
-                servicesData={props.servicesData}
+                servicesData={props.servicesData.reverse()}
                 technologyPartnersData={props.technologyPartnersData}
             />
         </React.Fragment >

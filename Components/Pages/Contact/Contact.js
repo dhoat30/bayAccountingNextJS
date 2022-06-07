@@ -26,7 +26,7 @@ function Contact() {
                 <ColumnTitle align="center">Don’t Hesitate To Contact Us</ColumnTitle>
                 <ContactPageForm emailRouteUrl={`${process.env.url}/wp-json/inspiry/v1/contact-page-email`} emailTo={contactInfoCtx.contactData[0].acf.email} />
             </FormContainer>
-
+            {/* 
             <ImageSection>
                 <ImageDiv>
                     <ImageStyle src={tePunaData[0].acf.site_image} layout="fill" />
@@ -36,7 +36,7 @@ function Contact() {
                     <ImageStyle src={tePukeData[0].acf.site_image} layout="fill" />
                     <ColumnTitleStyleSecond>{tePukeData[0].title.rendered}</ColumnTitleStyleSecond>
                 </ImageDiv>
-            </ImageSection>
+            </ImageSection> */}
 
         </Container>
     )

@@ -17,7 +17,7 @@ export default function Home(props) {
             </Head>
             <AllServices
                 heroImageData={props.heroImageData}
-                servicesData={props.servicesData}
+                servicesData={props.servicesData.reverse()}
                 technologyPartnersData={props.technologyPartnersData}
             />
         </React.Fragment >

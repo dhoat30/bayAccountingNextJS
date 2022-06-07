@@ -32,9 +32,9 @@ function NavbarComponent() {
                             <Link href="/about-us" passHref >
                                 <NavDropdown.Item >Our History</NavDropdown.Item>
                             </Link>
-                            <Link href="/meet-our-team" passHref>
+                            {/* <Link href="/meet-our-team" passHref>
                                 <NavDropdown.Item >Meat Our Team</NavDropdown.Item>
-                            </Link>
+                            </Link> */}
 
                         </NavDropdown>
                         <NavDropdown title="Our Services" >
@@ -48,20 +48,23 @@ function NavbarComponent() {
                                 <NavDropdown.Item >Taxation</NavDropdown.Item>
                             </Link>
                             <Link href="/services/gst-payroll-services-including-software-training" passHref>
-                                <NavDropdown.Item >GST Payroll</NavDropdown.Item>
+                                <NavDropdown.Item >GST/Payroll</NavDropdown.Item>
                             </Link>
                             <Link href="/services/budget-cashflow-forecast" passHref>
                                 <NavDropdown.Item >Budget/Cashflow Forecast</NavDropdown.Item>
                             </Link>
                             <Link href="/services/buying-setting-up-new-business" passHref>
-                                <NavDropdown.Item >Buying Setting Up Of New Business</NavDropdown.Item>
+                                <NavDropdown.Item >Buying/Setting Up Of New Business</NavDropdown.Item>
                             </Link>
                             <Link href="/services/property-investment-development" passHref>
-                                <NavDropdown.Item >Property Investment & Development</NavDropdown.Item>
+                                <NavDropdown.Item>Property Investment & Development</NavDropdown.Item>
                             </Link>
                         </NavDropdown>
 
                         <NavDropdown title="Client Resources" >
+                            <Link href="/client-resources/useful-forms-and-links" passHref>
+                                <NavDropdown.Item >Useful Forms & Links</NavDropdown.Item>
+                            </Link>
                             <Link href="/client-resources/questionnaire" passHref>
                                 <NavDropdown.Item >Questionnaire</NavDropdown.Item>
                             </Link>
@@ -78,9 +81,7 @@ function NavbarComponent() {
                         <Link href="/our-community-work" passHref>
                             <Nav.Link >Our Community Work</Nav.Link>
                         </Link>
-                        <Link href="/pay-now" passHref>
-                            <Nav.Link >Pay Now</Nav.Link>
-                        </Link>
+
                         {/* <Link href="#" passHref>
                             <Nav.Link >Log in</Nav.Link>
                         </Link> */}

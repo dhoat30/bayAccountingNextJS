@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import React, { useContext, useEffect } from 'react'
-import HomePage from '../../../Components/Pages/Home/Home'
-import AllServices from '../../../Components/Pages/Services/AllServices'
+import React from 'react'
+// import HomePage from '../../../Components/Pages/Home/Home'
+// import AllServices from '../../../Components/Pages/Services/AllServices'
 import Taxation from '../../../Components/Pages/Services/ServicePages/Taxation'
 import getHeroImageData from '../../../util/get-hero-image-data'
 import getServices from '../../../util/get-services'
-import getTeamMembers from '../../../util/get-team-members'
+// import getTeamMembers from '../../../util/get-team-members'
 import getTechnologyPartners from '../../../util/get-technology-parnters'
-import getTestimonials from '../../../util/get-testimonials'
+// import getTestimonials from '../../../util/get-testimonials'
 
 export default function TaxationPage(props) {
     console.log(props)
@@ -18,7 +18,7 @@ export default function TaxationPage(props) {
             </Head>
             <Taxation
                 heroImageData={props.heroImageData}
-                servicesData={props.servicesData}
+                servicesData={props.servicesData.reverse()}
                 technologyPartnersData={props.technologyPartnersData}
             />
 

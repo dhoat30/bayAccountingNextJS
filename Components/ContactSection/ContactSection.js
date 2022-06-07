@@ -11,14 +11,14 @@ function ContactSection() {
         return null
     }
     const siteImageCard = contactInfoCtx.contactData.map(item => {
-        console.log(item)
-        return (
-            <ImageDiv key={item.id}>
-                <LocationTitle>{item.slug === "te-puna-contact" ? "Te Puna" : "Te Puke"}</LocationTitle>
-                <Iframe src={item.acf.map} allowFullScreen="" loading="lazy"></Iframe>
-            </ImageDiv>
+        if (item.slug === "te-puna-contact")
+            return (
+                <ImageDiv key={item.id}>
+                    <LocationTitle>{item.slug === "te-puna-contact" ? "Te Puna" : "Te Puke"}</LocationTitle>
+                    <Iframe src={item.acf.map} allowFullScreen="" loading="lazy"></Iframe>
+                </ImageDiv>
 
-        )
+            )
     })
 
     return (
@@ -55,6 +55,7 @@ width: 48%;
 const MapContainer = styled.div`
     width: 48%;
     display: flex;
+    margin: 10px 0;
     flex-direction: column;
     @media (max-width: 850px ){ 
     width: 100%;

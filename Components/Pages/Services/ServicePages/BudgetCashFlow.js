@@ -6,8 +6,7 @@ import SectionTitle from '../../../UI/Titles/Titles/SectionTitle'
 import Paragraph from '../../../UI/Titles/Paragraph/Paragraph'
 import Sidebar from '../../../UI/Sidebar/Sidebar'
 import ImageTitleContent from '../../../UI/ImageTitleContent/ImageTitleContent'
-import Image from 'next/image'
-import MediumTitle from '../../../UI/Titles/Titles/MediumTitle'
+
 
 function BudgetCashFlow({ heroImageData, servicesData, technologyPartnersData }) {
     // getting the current page service 
@@ -26,19 +25,7 @@ function BudgetCashFlow({ heroImageData, servicesData, technologyPartnersData })
     })
 
     console.log(singleServiceData)
-    // list items cards 
-    // skip the first two array indexes 
-    const specializeCards = singleServiceData[0].acf.flexible_content.map((item, index) => {
-        if (index === 0 || index === 1) {
-            return null
-        }
-        return (
-            <ImageCard key={index}>
-                <ImageStyle src={item.image} layout="fixed" width={250} height={200} />
-                <MediumTitle align="center">{item.title}</MediumTitle>
-            </ImageCard>
-        )
-    })
+
 
     return (
         <div>
@@ -58,12 +45,7 @@ function BudgetCashFlow({ heroImageData, servicesData, technologyPartnersData })
                         />
                     </TitleContentImage>
 
-                    <SpecializeContainer>
-                        <SectionTitle fontWeight="600">We specialise in:</SectionTitle>
-                        <SpecialFlex>
-                            {specializeCards}
-                        </SpecialFlex>
-                    </SpecializeContainer>
+
 
                 </Content>
                 <SideBarContainer>
@@ -110,24 +92,7 @@ const TitleContentImage = styled.section`
     margin-top: 100px;
 `
 
-const SpecializeContainer = styled.section`
-margin-top: 100px;
-`
-const SpecialFlex = styled.div`
-display: flex;
-flex-wrap: wrap;
-`
-const ImageCard = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-max-width: 250px;
-background: var(--offWhite);
-margin: 20px 50px 20px 0;
-`
-const ImageStyle = styled(Image)`
-object-fit: cover;
-`
+
 const TechnologyContainer = styled.div`
 margin: 100px auto;
 max-width: 1500px;

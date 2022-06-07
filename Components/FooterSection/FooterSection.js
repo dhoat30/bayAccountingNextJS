@@ -29,7 +29,7 @@ function Footer() {
     // fetch services 
     const fetchData = async () => {
         const data = await getServices()
-        return data
+        return data.reverse()
     }
     const contactInfoCtx = useContext(ContactInfoContext)
     if (!contactInfoCtx.contactData || !servicesSlugs) {
@@ -37,7 +37,7 @@ function Footer() {
     }
 
     let tePunaContact = contactInfoCtx.contactData.filter(item => item.slug.includes("te-puna"))
-    let tePukeContact = contactInfoCtx.contactData.filter(item => item.slug.includes("te-puke"))
+    // let tePukeContact = contactInfoCtx.contactData.filter(item => item.slug.includes("te-puke"))
     return (
         <Container>
             <Content>
@@ -59,7 +59,7 @@ function Footer() {
                         />
                     </FlexItem>
 
-                    <FlexItem>
+                    {/* <FlexItem>
                         <ContactBar
                             title={tePukeContact[0].title.rendered}
                             phoneNumber={tePukeContact[0].acf.phone_number}
@@ -69,7 +69,7 @@ function Footer() {
                             openingHours={tePukeContact[0].acf.opening_hours}
                             daysOpen={tePukeContact[0].acf.days_open}
                         />
-                    </FlexItem>
+                    </FlexItem> */}
 
                     <FlexItem>
                         <Partners tmnzPartners={tePunaContact[0].acf.tmnz_partners} />
@@ -108,7 +108,7 @@ margin-top: 30px;
 `
 const SectionTitleStyle = styled(SectionTitle)`
 position: relative;
-border-bottom: 2px solid var(--neonGreen);
+border-bottom: 2px solid var(--lightGreen);
 padding: 0 0 10px 0;
 `
 

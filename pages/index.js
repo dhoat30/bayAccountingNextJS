@@ -18,7 +18,7 @@ export default function Home(props) {
       </Head>
       <HomePage
         imageData={props.heroImageData}
-        servicesData={props.servicesData}
+        servicesData={props.servicesData.reverse()}
         teamMembersData={props.teamMembersData}
         technologyPartnersData={props.technologyPartnersData}
         testimonialsData={props.testimonialsData}

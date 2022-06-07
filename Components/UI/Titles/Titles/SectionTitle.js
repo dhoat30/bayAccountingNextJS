@@ -41,7 +41,7 @@ const Subtitle = styled.h3`
     margin: 0 auto;
     font-weight: 600;
     color: var(--darkGreen);
-    font-size: 2rem;
+    font-size: 2.2rem;
     z-index: 2;
     left: 50%;
     transform: translate(-50%, 0);

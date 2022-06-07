@@ -5,20 +5,19 @@ import SectionTitle from '../../../UI/Titles/Titles/SectionTitle'
 import Paragraph from '../../../UI/Titles/Paragraph/Paragraph'
 import Accordion from '../../../UI/Accordion/Accordion'
 import OurTechnologyPartners from '../../../OurTechnologyPartners/OurTechnologyPartners'
-function Questionnaire({ heroImageData, questionnaireData, technologyPartnersData, pageData }) {
-    console.log(pageData)
-    const accordionCards = questionnaireData.map(item => {
-        console.log(item)
+function UsefulFormsLinks({ heroImageData, technologyPartnersData, pageData, usefulFormsLinksData }) {
+
+    const accordionCards = usefulFormsLinksData[0].acf.repeater.map((item, index) => {
         return (
-            <Accordion key={item.id}
-                title={item.title.rendered}
-                content={item.content.rendered}
+            <Accordion key={index}
+                title={item.title}
+                content={item.links_or_forms}
                 setDangerHtml={true}
             />
         )
     })
     return (
-        <div>
+        <div >
             <HeroImage images={heroImageData} smallHeight={true} />
             <FlexBox>
                 <TitleContainer>
@@ -40,12 +39,11 @@ function Questionnaire({ heroImageData, questionnaireData, technologyPartnersDat
     )
 }
 
-export default Questionnaire
+export default UsefulFormsLinks
 const FlexBox = styled.section`
 display: flex;
 justify-content: space-between;
 max-width: 1000px;
-margin: 100px auto;
 margin: 20px auto;
     padding: 10px;
 flex-wrap: wrap;

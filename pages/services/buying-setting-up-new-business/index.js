@@ -13,7 +13,7 @@ export default function BuyingNewBusiness(props) {
             </Head>
             <BuyingSettingUpNewBusiness
                 heroImageData={props.heroImageData}
-                servicesData={props.servicesData}
+                servicesData={props.servicesData.reverse()}
                 technologyPartnersData={props.technologyPartnersData}
             />
 

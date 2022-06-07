@@ -8,16 +8,13 @@ import { faPlus, faMinus } from '@fortawesome/pro-light-svg-icons'
 function Accordion({ title, content, setDangerHtml }) {
     const [showContent, setShowContent] = useState(false)
     return (
-        <Container bkColor={showContent}>
-            <FlexBox bkColor={showContent} onClick={() => setShowContent(showContent ? false : true)}>
-                <ColumnTitleStyle titlecolor={showContent}>{title}</ColumnTitleStyle>
-                {!showContent ?
-                    <IconStyle icon={showContent ? faMinus : faPlus} color="#2e5e37" /> :
-                    <IconStyle icon={showContent ? faMinus : faPlus} color="#ffffff" />
-                }
+        <Container>
+            <FlexBox >
+                <ColumnTitleStyle >{title}</ColumnTitleStyle>
+
             </FlexBox>
-            {showContent &&
-                <ParagraphStyle setDangerHtml={setDangerHtml} color="var(--white)">{content}</ParagraphStyle>}
+
+            <ParagraphStyle setDangerHtml={setDangerHtml} color="var(--white)">{content}</ParagraphStyle>
         </Container>
     )
 }
@@ -25,10 +22,10 @@ function Accordion({ title, content, setDangerHtml }) {
 export default Accordion
 
 const Container = styled.div`
-    background: ${props => props.bkColor ? "var(--darkGreen)" : " var(--offWhite)"};
+    background: var(--darkGreen);
     cursor: pointer; 
-    padding: ${props => props.bkColor ? "15px 20px" : "0"};
     margin: 20px 0;
+    padding: 10px;
 `
 const IconStyle = styled(FontAwesomeIcon)`
     font-size: 2rem;
@@ -36,13 +33,17 @@ const IconStyle = styled(FontAwesomeIcon)`
 `
 const ParagraphStyle = styled(Paragraph)`
     margin-top: 5px;
+    a{ 
+        text-decoration: underline; 
+        color: var(--white);
+    }
    
 `
 const ColumnTitleStyle = styled(ColumnTitle)`
+color: white;
  @media (max-width: 500px){ 
         font-size: 1.2rem;
     }
-color: ${props => props.titlecolor ? "var(--white)" : "var(--darkGrey) "};
 `
 
 const FlexBox = styled.div`
@@ -50,7 +51,6 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 
-padding: ${props => props.bkColor ? "0" : "15px 20px"};
 &:hover{ 
     background: var(--darkGreen);
     

@@ -3,7 +3,7 @@ import SectionTitle from '../../../UI/Titles/Titles/SectionTitle'
 import styled from 'styled-components'
 import TeamCards from '../../../UI/Cards/TeamCards'
 function TeamMembers({ teamMembersData }) {
-
+    console.log(teamMembersData)
     const teamMembersCard = teamMembersData.map(item => {
         return (
             <TeamCards
@@ -12,6 +12,7 @@ function TeamMembers({ teamMembersData }) {
                 jobTitle={item.acf.job_title}
                 email={item.acf.email}
                 image={item._embedded['wp:featuredmedia']['0'].source_url}
+                teamBody={item.acf.about_team_member}
             />
         )
     })

@@ -1,4 +1,3 @@
-import cookie from 'cookie'
 import Head from 'next/head'
 import React from 'react'
 import Questionnaire from '../../Components/Pages/Home/ClientResources/Questionnaire'
@@ -6,16 +5,19 @@ import getHeroImageData from '../../util/get-hero-image-data'
 import getTechnologyPartners from '../../util/get-technology-parnters'
 import getQuestionnaireData from '../../util/get-questionnaire-data'
 import getPage from '../../util/get-page'
+import UsefulFormsLinks from '../../Components/Pages/Home/ClientResources/UsefulFormsLinks'
+import getUsefulFormsLinks from '../../util/get-useful-forms-links'
 export default function QuestionnairePage(props) {
     console.log(props)
     return (
         < React.Fragment >
             <Head>
-                <title>Bay Accounting | Accounting Services</title>
+                <title>Bay Accounting | Useful Forms & Links</title>
             </Head>
-            <Questionnaire
+
+            <UsefulFormsLinks
                 heroImageData={props.heroImageData}
-                questionnaireData={props.questionnaireData}
+                usefulFormsLinksData={props.usefulFormsLinksData}
                 technologyPartnersData={props.technologyPartnersData}
                 pageData={props.pageData}
             />
@@ -25,10 +27,11 @@ export default function QuestionnairePage(props) {
 
 export async function getStaticProps(context) {
     // get home page data using category from hero images 
-    const heroImageData = await getHeroImageData("questionnaire")
-    const questionnaireData = await getQuestionnaireData()
+    const heroImageData = await getHeroImageData("useful-forms-and-links")
+    const usefulFormsLinksData = await getUsefulFormsLinks()
     const technologyPartnersData = await getTechnologyPartners()
-    const pageData = await getPage("questionnaire")
+    const pageData = await getPage("useful-forms-links")
+
     return {
         props: {
             heroImageData: {
@@ -38,7 +41,7 @@ export async function getStaticProps(context) {
                 },
                 title: heroImageData[0].title,
             },
-            questionnaireData: questionnaireData,
+            usefulFormsLinksData: usefulFormsLinksData,
             technologyPartnersData: technologyPartnersData,
             pageData: pageData
         },

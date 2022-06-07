@@ -3,7 +3,7 @@ import Testimonial from '../UI/Carousel/Testimonial'
 import styled from 'styled-components'
 function Testimonials({ testimonialsData }) {
     return (
-        <Container style={{ backgroundImage: 'url("/blue-background.jpg")' }}>
+        <Container >
             <Testimonial testimonialsData={testimonialsData} />
         </Container>
     )

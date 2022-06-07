@@ -16,7 +16,7 @@ function AboutUs({ heroImageData, pageData, technologyPartnersData, teamMembersD
                     listItems={pageData[0].acf.list_items}
                 />
             </MainContent>
-            <TeamMembers teamMembersData={teamMembersData} />
+            {/* <TeamMembers teamMembersData={teamMembersData} /> */}
             <TechnologyContainer>
                 <OurTechnologyPartners technologyPartnersData={technologyPartnersData} />
             </TechnologyContainer>

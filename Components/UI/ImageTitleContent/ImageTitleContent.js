@@ -43,7 +43,7 @@ flex-wrap: wrap-reverse;
 const ImageContainer = styled.div`
 position: relative;
 width: 100%;
-height: 500px;
+height: 400px;
 width: 48%;
 @media (max-width: 1300px){ 
     height: 350px;

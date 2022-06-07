@@ -14,7 +14,7 @@ export default function AccountingServicesPage(props) {
             </Head>
             <BusinessAdvisory
                 heroImageData={props.heroImageData}
-                servicesData={props.servicesData}
+                servicesData={props.servicesData.reverse()}
                 technologyPartnersData={props.technologyPartnersData}
             />
         </React.Fragment >

@@ -5,12 +5,13 @@ import ColumnTitle from '../Titles/Titles/ColumnTitle'
 import Paragraph from '../Titles/Paragraph/Paragraph'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/pro-solid-svg-icons'
-function TeamCards({ name, jobTitle, image, email }) {
+function TeamCards({ name, jobTitle, image, email, teamBody }) {
     return (
         <Container>
             <ImageStyle src={image} alt={name} layout="fixed" width={280} height={330} />
             <ColumnTitle align="center">{name}</ColumnTitle>
             <Paragraph align="center">{jobTitle}</Paragraph>
+            <ParagraphStyle align="center">{teamBody}</ParagraphStyle>
             <EmailContainer>
                 <Image src="/triangle.png" alt="UI Triangle" layout="fixed" width={120} height={120} />
 
@@ -27,6 +28,7 @@ export default TeamCards
 const Container = styled.div`
     margin: 20px;
     position: relative;
+    width: 300px;
 `
 
 const ImageStyle = styled(Image)`
@@ -42,4 +44,9 @@ font-size: 1.5rem;
 position: absolute;
 top: 15px; 
 left: 15px;
+`
+
+const ParagraphStyle = styled(Paragraph)`
+font-size: 0.9rem;
+color: grey;
 `

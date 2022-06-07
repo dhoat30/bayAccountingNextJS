@@ -44,10 +44,10 @@ function TopNavbar() {
                     <IconStyle icon={faMapMarkerAlt} />
                     <Link href="#">Te Puna</Link>
                 </Item>
-                <Item>
+                {/* <Item>
                     <IconStyle icon={faMapMarkerAlt} />
                     <Link href="#">Te Puke</Link>
-                </Item>
+                </Item> */}
             </Items>
         </Container>
     )

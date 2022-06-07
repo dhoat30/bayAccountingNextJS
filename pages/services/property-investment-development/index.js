@@ -14,7 +14,7 @@ export default function PropertyInvestmentDevelopmentPage(props) {
             </Head>
             <PropertyInvestmentDevelopment
                 heroImageData={props.heroImageData}
-                servicesData={props.servicesData}
+                servicesData={props.servicesData.reverse()}
                 technologyPartnersData={props.technologyPartnersData}
             />
 
