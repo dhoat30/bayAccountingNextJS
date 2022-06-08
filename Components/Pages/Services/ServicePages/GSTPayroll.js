@@ -6,6 +6,7 @@ import SectionTitle from '../../../UI/Titles/Titles/SectionTitle'
 import Paragraph from '../../../UI/Titles/Paragraph/Paragraph'
 import Sidebar from '../../../UI/Sidebar/Sidebar'
 import ListItems from '../../../UI/ListItems/ListItems'
+import LargeTitle from '../../../UI/Titles/Titles/LargeTitle'
 function GSTPayroll({ heroImageData, servicesData, technologyPartnersData }) {
     // getting the current page service 
     const singleServiceData = servicesData.filter(item => {
@@ -41,8 +42,8 @@ function GSTPayroll({ heroImageData, servicesData, technologyPartnersData }) {
             <FlexBox>
                 <Content>
                     <PayrollContainer>
-                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[0].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[0].content}</Paragraph>
+                        <LargeTitle fontWeight="600">{singleServiceData[0].acf.flexible_content[0].title}</LargeTitle>
+                        <Paragraph setDangerHtml={true}>{singleServiceData[0].acf.flexible_content[0].content}</Paragraph>
                     </PayrollContainer>
 
                     <ListContainer>
@@ -51,8 +52,9 @@ function GSTPayroll({ heroImageData, servicesData, technologyPartnersData }) {
                     </ListContainer>
 
                     <PayrollContainer>
-                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[2].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[2].content}</Paragraph>
+                        <LargeTitle fontWeight="600">{singleServiceData[0].acf.flexible_content[2].title}</LargeTitle>
+
+                        <Paragraph setDangerHtml={true}>{singleServiceData[0].acf.flexible_content[2].content}</Paragraph>
                     </PayrollContainer>
 
                     <ListContainer>
@@ -103,7 +105,7 @@ margin-top: 100px;
 `
 
 const ListContainer = styled.div`
-margin-top: 100px;
+margin-top: 20px;
 `
 
 const TechnologyContainer = styled.div`

@@ -6,6 +6,7 @@ import SectionTitle from '../../../UI/Titles/Titles/SectionTitle'
 import Paragraph from '../../../UI/Titles/Paragraph/Paragraph'
 import Sidebar from '../../../UI/Sidebar/Sidebar'
 import ListItems from '../../../UI/ListItems/ListItems'
+import MediumTitle from '../../../UI/Titles/Titles/MediumTitle'
 function PropertyInvestmentDevelopment({ heroImageData, servicesData, technologyPartnersData }) {
     // getting the current page service 
     const singleServiceData = servicesData.filter(item => {
@@ -47,23 +48,20 @@ function PropertyInvestmentDevelopment({ heroImageData, servicesData, technology
             <HeroImage images={heroImageData} smallHeight={true} />
             <FlexBox>
                 <Content>
-                    <PayrollContainer>
-                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[0].title}</SectionTitle>
-                        <Paragraph setDangerHtml={true}>{singleServiceData[0].acf.flexible_content[0].content}</Paragraph>
-                    </PayrollContainer>
 
                     <ListContainer>
-                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[1].title}</SectionTitle>
+
+                        <SectionTitleStyle fontWeight="600"> {singleServiceData[0].acf.flexible_content[1].title}</SectionTitleStyle>
                         {helpCards}
                     </ListContainer>
 
                     <ListContainer>
-                        <SectionTitle fontWeight="600">{singleServiceData[0].acf.flexible_content[2].title}</SectionTitle>
+                        <SectionTitleStyle fontWeight="600">{singleServiceData[0].acf.flexible_content[2].title}</SectionTitleStyle>
                         {investerCards}
                     </ListContainer>
 
                     <ListContainer>
-                        <SectionTitle fontWeight="600">{singleServiceData[0].acf.flexible_content[3].title}</SectionTitle>
+                        <SectionTitleStyle fontWeight="600">{singleServiceData[0].acf.flexible_content[3].title}</SectionTitleStyle>
                         {strategyCards}
                     </ListContainer>
                 </Content>
@@ -123,4 +121,11 @@ margin-top: 100px;
 const TechnologyContainer = styled.div`
 margin: 100px auto;
 max-width: 1500px;
+`
+
+const SectionTitleStyle = styled(SectionTitle)`
+font-size: 2rem; 
+@media(max-width: 1000px){ 
+    font-size: 1.5rem; 
+}
 `

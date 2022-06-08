@@ -21,13 +21,15 @@ function OurCommunityWork({ heroImageData, communityWorkData, }) {
             // />
             <Card key={item.id}>
 
-                <ImageContainer>
-                    <ImageStyle src={item.acf.archive_page_image.url} layout="fill" alt={item.title.rendered} />
-                </ImageContainer>
+                {/* <ImageContainer>
+                    <ImageStyle src={item.acf.archive_page_image.url } layout="fill" alt={item.title.rendered} />
+                </ImageContainer> */}
                 <Content>
                     <ColumnTitle fontWeight={700}>{item.title.rendered}</ColumnTitle>
-                    <Paragraph setDangerHtml={true}>{item.content.rendered}</Paragraph>
+                    <ParagraphStyle setDangerHtml={true}>{item.content.rendered}</ParagraphStyle>
+
                 </Content>
+
             </Card>
         )
     })
@@ -69,19 +71,39 @@ const Card = styled.div`
     background: white;
     padding: 20px;
     box-shadow: var(--boxShadow);
+    ul{ 
+        list-style: disc;  
+        margin-left: 30px;  
+    }
 `
-const ImageContainer = styled.div`
-    width: 100%; 
-    position: relative;
-    max-width: 400px; 
-    height: auto;
-    min-width: 300px;
-    min-height: 300px;
-`
-const ImageStyle = styled(Image)`
-    object-fit: cover; 
-`
+// const ImageContainer = styled.div`
+//     width: 100%; 
+//     position: relative;
+//     max-width: 400px; 
+//     height: auto;
+//     min-width: 300px;
+//     min-height: 300px;
+// `
+// const ImageStyle = styled(Image)`
+//     object-fit: cover; 
+// `
 const Content = styled.div`
 width: 100%; 
 margin-left: 30px;
+`
+
+
+const ListContainer = styled.div`
+margin-top: 50px;
+`
+
+const SectionTitleStyle = styled(SectionTitle)`
+font-size: 2rem; 
+@media(max-width: 1000px){ 
+    font-size: 1.5rem; 
+}
+`
+
+const ParagraphStyle = styled(Paragraph)`
+margin-top: 10px;
 `

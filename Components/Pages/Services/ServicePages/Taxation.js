@@ -6,30 +6,11 @@ import SectionTitle from '../../../UI/Titles/Titles/SectionTitle'
 import Paragraph from '../../../UI/Titles/Paragraph/Paragraph'
 import Accordion from '../../../UI/Accordion/Accordion'
 import Sidebar from '../../../UI/Sidebar/Sidebar'
+import ListItems from '../../../UI/ListItems/ListItems'
 function Taxation({ heroImageData, servicesData, technologyPartnersData }) {
     // getting the current page service 
     const singleServiceData = servicesData.filter(item => {
         return item.slug.includes("taxation")
-    })
-    // accordion
-    const accordionCards = singleServiceData[0].acf.flexible_content[1].accordion.map((item, index) => {
-        return (
-            <Accordion
-                key={index}
-                title={item.title}
-                content={item.content}
-            />
-        )
-    })
-    // accordion
-    const taxShieldAccordion = singleServiceData[0].acf.flexible_content[2].accordion.map((item, index) => {
-        return (
-            <Accordion
-                key={index}
-                title={item.title}
-                content={item.content}
-            />
-        )
     })
 
     // service list data
@@ -40,6 +21,13 @@ function Taxation({ heroImageData, servicesData, technologyPartnersData }) {
             id: item.id
         }
     })
+    // list items cards 
+    const firstList = singleServiceData[0].acf.flexible_content[1].list_items.map((item, index) => {
+        return (
+            <ListItems listContent={item.list_item} key={index} />
+        )
+    })
+
     return (
         <div>
             <HeroImage images={heroImageData} smallHeight={true} />
@@ -47,26 +35,20 @@ function Taxation({ heroImageData, servicesData, technologyPartnersData }) {
                 <Content>
                     <TaxationContainer>
                         <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[0].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[0].content}</Paragraph>
+                        <Paragraph setDangerHtml={true}>{singleServiceData[0].acf.flexible_content[0].content}</Paragraph>
                     </TaxationContainer>
 
                     <TaxAuditContainer>
-                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[1].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[1].content}</Paragraph>
-
-                        <AccordionContainer>
-                            {accordionCards}
-                        </AccordionContainer>
+                        <SectionTitleStyle fontWeight="600">{singleServiceData[0].acf.flexible_content[1].title}</SectionTitleStyle>
+                        {firstList}
                     </TaxAuditContainer>
 
 
                     <AuditShieldContainer>
                         <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[2].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[2].content}</Paragraph>
+                        <SectionTitleStyle fontWeight="600">{singleServiceData[0].acf.flexible_content[3].title}</SectionTitleStyle>
+                        <Paragraph setDangerHtml={true}>{singleServiceData[0].acf.flexible_content[3].content}</Paragraph>
 
-                        <AccordionContainer>
-                            {taxShieldAccordion}
-                        </AccordionContainer>
                     </AuditShieldContainer>
 
                 </Content>
@@ -112,16 +94,20 @@ margin-top: 100px;
 `
 
 const TaxAuditContainer = styled.div`
-margin-top: 100px;
 `
 
-const AccordionContainer = styled.div`
-margin-top: 20px;
-`
+
 const AuditShieldContainer = styled.div`
-margin-top: 100px;
+margin-top: 50px;
 `
 const TechnologyContainer = styled.div`
 margin: 100px auto;
 max-width: 1500px;
+`
+
+const SectionTitleStyle = styled(SectionTitle)`
+font-size: 2rem; 
+@media(max-width: 1000px){ 
+    font-size: 1.5rem; 
+}
 `

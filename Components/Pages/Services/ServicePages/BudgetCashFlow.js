@@ -6,7 +6,7 @@ import SectionTitle from '../../../UI/Titles/Titles/SectionTitle'
 import Paragraph from '../../../UI/Titles/Paragraph/Paragraph'
 import Sidebar from '../../../UI/Sidebar/Sidebar'
 import ImageTitleContent from '../../../UI/ImageTitleContent/ImageTitleContent'
-
+import ListItems from '../../../UI/ListItems/ListItems'
 
 function BudgetCashFlow({ heroImageData, servicesData, technologyPartnersData }) {
     // getting the current page service 
@@ -24,8 +24,11 @@ function BudgetCashFlow({ heroImageData, servicesData, technologyPartnersData })
         }
     })
 
-    console.log(singleServiceData)
-
+    const coreServices = singleServiceData[0].acf.flexible_content[1].list_items.map((item, index) => {
+        return (
+            <ListItems listContent={item.list_item} key={index} />
+        )
+    })
 
     return (
         <div>
@@ -36,12 +39,16 @@ function BudgetCashFlow({ heroImageData, servicesData, technologyPartnersData })
                         <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[0].title}</SectionTitle>
                         <Paragraph setDangerHtml={true}>{singleServiceData[0].acf.flexible_content[0].content}</Paragraph>
                     </TitleContentContainer>
+                    <ListContainer>
+                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[1].title}</SectionTitle>
+                        {coreServices}
+                    </ListContainer>
 
                     <TitleContentImage>
                         <ImageTitleContent
-                            image={singleServiceData[0].acf.flexible_content[1].image}
-                            title={singleServiceData[0].acf.flexible_content[1].title}
-                            content={singleServiceData[0].acf.flexible_content[1].content}
+                            image={singleServiceData[0].acf.flexible_content[2].image}
+                            title={singleServiceData[0].acf.flexible_content[2].title}
+                            content={singleServiceData[0].acf.flexible_content[2].content}
                         />
                     </TitleContentImage>
 
@@ -76,6 +83,10 @@ const Content = styled.div`
 width: 100%;
 
 `
+const ListContainer = styled.div`
+margin-top: 100px;
+`
+
 const SideBarContainer = styled.section`
     width: 100%;
     max-width: 350px;
