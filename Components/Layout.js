@@ -23,7 +23,6 @@ function Layout(props) {
             })
             .catch(err => console.log(err))
     }, [])
-    console.log(contactInfoCtx)
     return (
         <div>
             <Header></Header>

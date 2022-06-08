@@ -12,8 +12,11 @@ function ServiceCard({ title, image, excerpt, slug }) {
     return (
         <Link href={`/services/${slug}`} passHref>
             <Container >
-                <Card style={{ backgroundImage: 'url("/curved-lines.svg")' }}>
-                    <ImageStyle src={image} layout="fixed" width={140} height={120} alt={title} />
+                <Card >
+                    <ImageContainer>
+                        <ImageStyle src={image} layout="fill" alt={title} />
+
+                    </ImageContainer>
                     <Content>
                         <ColumnTitle align="center">{title}</ColumnTitle>
                         <Paragraph align="center" >{excerptProcessed}...</Paragraph>
@@ -71,6 +74,11 @@ min-height: 360px;
 background-repeat: no-repeat;
 background-size: cover;
 
+`
+const ImageContainer = styled.div`
+position: relative ;
+width: 150px;
+height: 150px;
 `
 const ImageStyle = styled(Image)`
 object-fit: cover;

@@ -5,14 +5,13 @@ import getTechnologyPartners from '../../util/get-technology-parnters'
 import AboutUs from '../../Components/Pages/AboutUs/AboutUs'
 import getPage from '../../util/get-page'
 import getTeamMembers from '../../util/get-team-members'
+import SEO from '../../Components/SEO'
 
 export default function AboutUsPage(props) {
     console.log(props)
     return (
         < React.Fragment >
-            <Head>
-                <title>Bay Accounting | Accounting Services</title>
-            </Head>
+
             <AboutUs
                 heroImageData={props.heroImageData}
                 pageData={props.pageData}
@@ -38,6 +37,7 @@ export async function getStaticProps(context) {
                     mobileImage: heroImageData[0].acf.mobileImage,
                 },
                 title: heroImageData[0].title,
+
             },
             pageData: pageData,
             technologyPartnersData: technologyPartnersData,

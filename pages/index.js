@@ -2,6 +2,7 @@ import cookie from 'cookie'
 import Head from 'next/head'
 import React, { useContext, useEffect } from 'react'
 import HomePage from '../Components/Pages/Home/Home'
+import SEO from '../Components/SEO'
 import getHeroImageData from '../util/get-hero-image-data'
 import getServices from '../util/get-services'
 import getTeamMembers from '../util/get-team-members'
@@ -9,13 +10,17 @@ import getTechnologyPartners from '../util/get-technology-parnters'
 import getTestimonials from '../util/get-testimonials'
 
 export default function Home(props) {
-  console.log(props)
+
+  const seo = {
+    title: props.heroImageData.seo.seoTitle[0],
+    description: props.heroImageData.seo.seoDesc[0],
+    imageSrc: props.heroImageData.images.mobileImage
+  }
   return (
     < React.Fragment >
-      <Head>
-        {/* add seo in here */}
-        <title>Bay Accounting | Accounting Services</title>
-      </Head>
+      <SEO
+        seo={seo}
+      />
       <HomePage
         imageData={props.heroImageData}
         servicesData={props.servicesData.reverse()}
@@ -42,6 +47,7 @@ export async function getStaticProps(context) {
           mobileImage: data[0].acf.mobileImage,
         },
         title: data[0].title,
+        seo: data[0].seo
       },
       servicesData: servicesData,
       teamMembersData: teamMembersData,

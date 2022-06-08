@@ -14,7 +14,6 @@ import Link from 'next/link'
 import PhoneIcon from '../../UI/SVG/PhoneIcon'
 import LocationIcon from '../../UI/SVG/LocationIcon'
 function Home({ imageData, servicesData, teamMembersData, technologyPartnersData, testimonialsData }) {
-    console.log(imageData)
     return (
         <section>
             <HeroContainer>

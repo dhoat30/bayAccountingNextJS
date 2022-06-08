@@ -1,6 +1,6 @@
 async function getHeroImageData(category) {
     let response
-    await fetch(`${process.env.url}/wp-json/inspiry/v1/home-page`, {
+    await fetch(`${process.env.url}/wp-json/webduel/v1/home-page`, {
         headers: {
             "Content-Type": "application/json"
         },
