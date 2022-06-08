@@ -67,7 +67,7 @@ function BusinessAdvisory({ heroImageData, servicesData, technologyPartnersData 
 
                     <PayrollContainer>
                         <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[2].title}</SectionTitle>
-                        <Paragraph>{singleServiceData[0].acf.flexible_content[2].content}</Paragraph>
+                        <Paragraph setDangerHtml={true}>{singleServiceData[0].acf.flexible_content[2].content}</Paragraph>
                     </PayrollContainer>
                     <SpecializeContainer>
                         <SectionTitle fontWeight="600">We specialise in:</SectionTitle>
