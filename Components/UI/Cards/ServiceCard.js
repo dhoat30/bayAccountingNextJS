@@ -77,8 +77,8 @@ background-size: cover;
 `
 const ImageContainer = styled.div`
 position: relative ;
-width: 150px;
-height: 150px;
+width: 100px;
+height: 100px;
 `
 const ImageStyle = styled(Image)`
 object-fit: cover;

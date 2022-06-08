@@ -67,18 +67,24 @@ height:600px;
 display: flex;
 align-items: center; 
 max-width: 1550px;
-    padding: 0 10px;
+    padding: 0 0 0 10px ;
     margin: 0 0 0 auto ; 
     @media(max-width: 1000px){ 
     flex-wrap: wrap-reverse; 
     height:auto;
     align-items: flex-end; 
+    padding: 0 0 0 0 ;
+}
+@media(min-width: 1800px){ 
+    max-width: 1700px;
 }
 `
 const Content = styled.div`
 @media(max-width: 1000px){ 
     width: 100%; 
     margin: 30px 0;
+    padding: 0 0 0 10px ;
+
 }
     width: 50%;
 `
