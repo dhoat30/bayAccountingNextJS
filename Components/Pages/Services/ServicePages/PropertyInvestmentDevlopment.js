@@ -48,17 +48,15 @@ function PropertyInvestmentDevelopment({ heroImageData, servicesData, technology
             <HeroImage images={heroImageData} smallHeight={true} />
             <FlexBox>
                 <Content>
-
                     <ListContainer>
-
                         <SectionTitleStyle fontWeight="600"> {singleServiceData[0].acf.flexible_content[1].title}</SectionTitleStyle>
                         {helpCards}
                     </ListContainer>
 
-                    <ListContainer>
+                    {/* <ListContainer>
                         <SectionTitleStyle fontWeight="600">{singleServiceData[0].acf.flexible_content[2].title}</SectionTitleStyle>
                         {investerCards}
-                    </ListContainer>
+                    </ListContainer> */}
 
                     <ListContainer>
                         <SectionTitleStyle fontWeight="600">{singleServiceData[0].acf.flexible_content[3].title}</SectionTitleStyle>

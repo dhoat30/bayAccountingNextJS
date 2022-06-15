@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import ColumnTitle from '../Titles/Titles/ColumnTitle'
 import Paragraph from '../Titles/Paragraph/Paragraph'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/pro-solid-svg-icons'
+
 function TeamCards({ name, jobTitle, image, email, teamBody }) {
     return (
         <Container>
@@ -38,7 +37,7 @@ const EmailContainer = styled.div`
 position: absolute; 
 top: 0; 
 `
-const IconStyle = styled(FontAwesomeIcon)`
+const IconStyle = styled.svg`
 color: white;
 font-size: 1.5rem;
 position: absolute;

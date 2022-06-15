@@ -11,9 +11,9 @@ function AboutUs({ heroImageData, pageData, technologyPartnersData, teamMembersD
             <HeroImage images={heroImageData} smallHeight={true} />
             <MainContent>
                 <ImageTitleContent
-                    title={pageData[0].title.rendered}
+                    // title={pageData[0].title.rendered}
                     content={pageData[0].acf.content}
-                    listItems={pageData[0].acf.list_items}
+                // listItems={pageData[0].acf.list_items}
                 />
             </MainContent>
             {/* <TeamMembers teamMembersData={teamMembersData} /> */}

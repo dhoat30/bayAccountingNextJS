@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import Paragraph from '../Titles/Paragraph/Paragraph'
 import ColumnTitle from '../Titles/Titles/ColumnTitle'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faMinus } from '@fortawesome/pro-light-svg-icons'
+
 
 function Accordion({ title, content, setDangerHtml }) {
     const [showContent, setShowContent] = useState(false)
@@ -27,7 +26,7 @@ const Container = styled.div`
     margin: 20px 0;
     padding: 10px;
 `
-const IconStyle = styled(FontAwesomeIcon)`
+const IconStyle = styled.svg`
     font-size: 2rem;
 
 `

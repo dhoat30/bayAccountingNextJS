@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes, faChevronDown, faChevronUp } from '@fortawesome/pro-light-svg-icons'
+
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
@@ -38,9 +37,9 @@ function NavbarComponent() {
 
                         </NavDropdown>
                         <NavDropdown title="Our Services" >
-                            <Link href="/services" passHref>
+                            {/* <Link href="/services" passHref>
                                 <NavDropdown.Item >All Services</NavDropdown.Item>
-                            </Link>
+                            </Link> */}
                             <Link href="/services/accounting-services" passHref>
                                 <NavDropdown.Item >Accounting Services</NavDropdown.Item>
                             </Link>
@@ -51,13 +50,13 @@ function NavbarComponent() {
                                 <NavDropdown.Item >GST/Payroll</NavDropdown.Item>
                             </Link>
                             <Link href="/services/budget-cashflow-forecast" passHref>
-                                <NavDropdown.Item >Budget/Cashflow Forecast</NavDropdown.Item>
+                                <NavDropdown.Item >Budgets/Cashflow Forecast</NavDropdown.Item>
                             </Link>
                             <Link href="/services/buying-setting-up-new-business" passHref>
                                 <NavDropdown.Item >Buying/Setting Up Of New Business</NavDropdown.Item>
                             </Link>
                             <Link href="/services/property-investment-development" passHref>
-                                <NavDropdown.Item>Property Investment & Development</NavDropdown.Item>
+                                <NavDropdown.Item>Property Development & Investment</NavDropdown.Item>
                             </Link>
                         </NavDropdown>
 

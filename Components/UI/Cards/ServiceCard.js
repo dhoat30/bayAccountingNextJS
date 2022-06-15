@@ -3,8 +3,7 @@ import ColumnTitle from '../Titles/Titles/ColumnTitle'
 import styled from 'styled-components'
 import Image from 'next/image'
 import Paragraph from '../Titles/Paragraph/Paragraph'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLongArrowRight } from '@fortawesome/pro-light-svg-icons'
+
 import Link from 'next/link'
 function ServiceCard({ title, image, excerpt, slug }) {
     let excerptProcessed = excerpt.replace(/(<([^>]+)>)/ig, '')
@@ -21,7 +20,13 @@ function ServiceCard({ title, image, excerpt, slug }) {
                         <ColumnTitle align="center">{title}</ColumnTitle>
                         <Paragraph align="center" >{excerptProcessed}...</Paragraph>
                     </Content>
-                    <IconStyle icon={faLongArrowRight} />
+                    <IconStyle width="30px" height="30px" viewBox="0 0 44.572 25.243">
+                        <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(1.5 2.121)">
+                            <path id="Path_20462" data-name="Path 20462" d="M7.5,18H49.071" transform="translate(-7.5 -7.5)" fill="none" stroke="#17212a" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" />
+                            <path id="Path_20463" data-name="Path 20463" d="M18,7.5,28.5,18,18,28.5" transform="translate(13.072 -7.5)" fill="none" stroke="#17212a" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" />
+                        </g>
+                    </IconStyle>
+
                 </Card>
                 <BackDropCard />
             </Container>
@@ -87,8 +92,8 @@ const Content = styled.div`
 margin-top: 20px;
 `
 
-const IconStyle = styled(FontAwesomeIcon)`
-    font-size: 2rem;
+const IconStyle = styled.svg`
+    
     text-align: center;
 `
 

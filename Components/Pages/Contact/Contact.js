@@ -23,7 +23,7 @@ function Contact() {
         <Container>
             <LargeTitle align="center">Contact Us</LargeTitle>
             <FormContainer>
-                <ColumnTitle align="center">Don’t Hesitate To Contact Us</ColumnTitle>
+                {/* <ColumnTitle align="center">Don’t Hesitate To Contact Us</ColumnTitle> */}
                 <ContactPageForm emailRouteUrl={`${process.env.url}/wp-json/inspiry/v1/contact-page-email`} emailTo={contactInfoCtx.contactData[0].acf.email} />
             </FormContainer>
             {/* 

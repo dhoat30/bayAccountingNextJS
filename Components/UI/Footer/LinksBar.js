@@ -1,6 +1,4 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhoneAlt, faEnvelope, faMapMarkerAlt, faClock } from '@fortawesome/pro-solid-svg-icons'
 import styled from 'styled-components'
 import ColumnTitle from '../Titles/Titles/ColumnTitle'
 
@@ -35,11 +33,11 @@ const Link = styled.li`
 margin: 15px 0 0 0; 
 `
 
-const IconStyle = styled(FontAwesomeIcon)`
-    color: var(--lightGreen);
-    font-size: 1.8rem;
-    padding-right: 7px;
-`
+// const IconStyle = styled(FontAwesomeIcon)`
+//     color: var(--lightGreen);
+//     font-size: 1.8rem;
+//     padding-right: 7px;
+// `
 const Anchor = styled.a`
 line-height: 1.5rem;
 display: flex; 
@@ -50,9 +48,9 @@ font-size: 1.2rem;
 &:hover{ 
     color: var(--white); 
 }
-&:hover ${IconStyle}{ 
+/* &:hover ${IconStyle}{ 
     color: var(--white);
-}
+} */
 `
 const IconContainer = styled.span`
 display: block;

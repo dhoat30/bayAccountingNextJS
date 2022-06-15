@@ -6,8 +6,7 @@ import SectionTitle from '../UI/Titles/Titles/SectionTitle'
 import Partners from '../UI/Footer/Partners'
 import getServices from '../../util/get-services'
 import LinksBar from '../UI/Footer/LinksBar'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleUp } from '@fortawesome/pro-light-svg-icons'
+
 import Copyright from '../UI/Footer/Copyright'
 
 
@@ -78,7 +77,9 @@ function Footer() {
 
                 <Border>
                     <IconContainer href="#">
-                        <IconStyle icon={faAngleUp} />
+                        <IconStyle width="30" height="13.503" viewBox="0 0 23.619 13.503">
+                            <path id="Icon_ionic-ios-arrow-up" data-name="Icon ionic-ios-arrow-up" d="M18,15.321l8.93,8.937a1.688,1.688,0,1,0,2.384-2.391L19.2,11.742a1.685,1.685,0,0,0-2.327-.049L6.68,21.86a1.688,1.688,0,0,0,2.384,2.391Z" transform="translate(-6.188 -11.251)" fill="#039f20" />
+                        </IconStyle>
                     </IconContainer>
                 </Border>
                 <Copyright copyrightData={tePunaContact[0].acf.copyright_info} />
@@ -129,14 +130,13 @@ transform: translate(-50%, -50%);
  border: 2px solid #1D2D3A;
     border-radius: 50%;
     display: inline-block;
-    padding: 0 15px;
+    padding: 10px;
     cursor: pointer;
     &:hover{ 
         border: 2px solid var(--neonGreen);
     }
 `
-const IconStyle = styled(FontAwesomeIcon)`
-    color: var(--neonGreen); 
-    font-size: 3rem; 
-   
+const IconStyle = styled.svg`
+position:relative ;
+top: -2px; 
 `
