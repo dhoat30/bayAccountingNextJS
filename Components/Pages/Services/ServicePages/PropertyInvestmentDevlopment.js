@@ -30,18 +30,18 @@ function PropertyInvestmentDevelopment({ heroImageData, servicesData, technology
     })
 
     // list items cards 
-    const investerCards = singleServiceData[0].acf.flexible_content[2].list_items.map((item, index) => {
-        return (
-            <ListItems listContent={item.list_item} key={index} showDots={true} />
-        )
-    })
+    // const investerCards = singleServiceData[0].acf.flexible_content[2].list_items.map((item, index) => {
+    //     return (
+    //         <ListItems listContent={item.list_item} key={index} showDots={true} />
+    //     )
+    // })
 
     // list items cards 
-    const strategyCards = singleServiceData[0].acf.flexible_content[3].list_items.map((item, index) => {
-        return (
-            <ListItems listContent={item.list_item} key={index} showDots={true} />
-        )
-    })
+    // const strategyCards = singleServiceData[0].acf.flexible_content[3].list_items.map((item, index) => {
+    //     return (
+    //         <ListItems listContent={item.list_item} key={index} showDots={true} />
+    //     )
+    // })
 
     return (
         <div>
@@ -58,10 +58,10 @@ function PropertyInvestmentDevelopment({ heroImageData, servicesData, technology
                         {investerCards}
                     </ListContainer> */}
 
-                    <ListContainer>
+                    {/* <ListContainer>
                         <SectionTitleStyle fontWeight="600">{singleServiceData[0].acf.flexible_content[3].title}</SectionTitleStyle>
                         {strategyCards}
-                    </ListContainer>
+                    </ListContainer> */}
                 </Content>
 
 

@@ -7,7 +7,7 @@ import Paragraph from '../../../UI/Titles/Paragraph/Paragraph'
 import Sidebar from '../../../UI/Sidebar/Sidebar'
 import ImageTitleContent from '../../../UI/ImageTitleContent/ImageTitleContent'
 import ListItems from '../../../UI/ListItems/ListItems'
-
+import Image from 'next/image'
 function BudgetCashFlow({ heroImageData, servicesData, technologyPartnersData }) {
     // getting the current page service 
 
@@ -39,18 +39,17 @@ function BudgetCashFlow({ heroImageData, servicesData, technologyPartnersData })
                         <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[0].title}</SectionTitle>
                         <Paragraph setDangerHtml={true}>{singleServiceData[0].acf.flexible_content[0].content}</Paragraph>
                     </TitleContentContainer>
-                    <ListContainer>
-                        <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[1].title}</SectionTitle>
-                        {coreServices}
-                    </ListContainer>
+                    <FlexBoxListContainer>
+                        <ListContainer>
+                            <SectionTitle fontWeight="600"> {singleServiceData[0].acf.flexible_content[1].title}</SectionTitle>
+                            {coreServices}
+                        </ListContainer>
+                        <ImageContainer>
+                            <ImageStyle src={singleServiceData[0].acf.flexible_content[2].image} layout="fill" />
+                        </ImageContainer>
 
-                    <TitleContentImage>
-                        <ImageTitleContent
-                            image={singleServiceData[0].acf.flexible_content[2].image}
-                            title={singleServiceData[0].acf.flexible_content[2].title}
-                            content={singleServiceData[0].acf.flexible_content[2].content}
-                        />
-                    </TitleContentImage>
+                    </FlexBoxListContainer>
+
 
 
 
@@ -83,9 +82,7 @@ const Content = styled.div`
 width: 100%;
 
 `
-const ListContainer = styled.div`
-margin-top: 100px;
-`
+
 
 const SideBarContainer = styled.section`
     width: 100%;
@@ -107,4 +104,33 @@ const TitleContentImage = styled.section`
 const TechnologyContainer = styled.div`
 margin: 100px auto;
 max-width: 1500px;
+`
+const FlexBoxListContainer = styled.div`
+    display: flex;
+    align-items: center; 
+    margin-top: 100px;
+ 
+    @media(max-width: 1200px){ 
+        margin-top: 50px; 
+        flex-wrap: wrap;
+    }
+`
+const ListContainer = styled.div`
+
+width: 50% ;
+@media(max-width: 1200px){ 
+        width: 100%;
+    }
+`
+const ImageContainer = styled.div`
+position: relative; 
+width: 50%;
+height: 300px;
+@media(max-width: 1200px){ 
+        width: 100%;
+    }
+
+`
+const ImageStyle = styled(Image)`
+    object-fit: cover; 
 `

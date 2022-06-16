@@ -26,16 +26,18 @@ function NavbarComponent() {
                         <Link href="/" passHref>
                             <Nav.Link >Home</Nav.Link>
                         </Link>
-
-                        <NavDropdown title="About Us" >
+                        <Link href="/about-us" passHref>
+                            <Nav.Link >About Us</Nav.Link>
+                        </Link>
+                        {/* <NavDropdown title="About Us" >
                             <Link href="/about-us" passHref >
                                 <NavDropdown.Item >Our History</NavDropdown.Item>
-                            </Link>
-                            {/* <Link href="/meet-our-team" passHref>
+                            </Link> */}
+                        {/* <Link href="/meet-our-team" passHref>
                                 <NavDropdown.Item >Meat Our Team</NavDropdown.Item>
                             </Link> */}
 
-                        </NavDropdown>
+                        {/* </NavDropdown> */}
                         <NavDropdown title="Our Services" >
                             {/* <Link href="/services" passHref>
                                 <NavDropdown.Item >All Services</NavDropdown.Item>
@@ -49,7 +51,7 @@ function NavbarComponent() {
                             <Link href="/services/gst-payroll-services-including-software-training" passHref>
                                 <NavDropdown.Item >GST/Payroll</NavDropdown.Item>
                             </Link>
-                            <Link href="/services/budget-cashflow-forecast" passHref>
+                            <Link href="/services/budgets-cashflow-forecast" passHref>
                                 <NavDropdown.Item >Budgets/Cashflow Forecast</NavDropdown.Item>
                             </Link>
                             <Link href="/services/buying-setting-up-new-business" passHref>
