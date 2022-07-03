@@ -7,7 +7,6 @@ import getTechnologyPartners from '../../util/get-technology-parnters'
 import getQuestionnaireData from '../../util/get-questionnaire-data'
 import getPage from '../../util/get-page'
 export default function QuestionnairePage(props) {
-    console.log(props)
     return (
         < React.Fragment >
             <Head>

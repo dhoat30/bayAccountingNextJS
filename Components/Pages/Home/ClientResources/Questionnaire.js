@@ -6,13 +6,13 @@ import Paragraph from '../../../UI/Titles/Paragraph/Paragraph'
 import Accordion from '../../../UI/Accordion/Accordion'
 import OurTechnologyPartners from '../../../OurTechnologyPartners/OurTechnologyPartners'
 function Questionnaire({ heroImageData, questionnaireData, technologyPartnersData, pageData }) {
-    console.log(pageData)
-    const accordionCards = questionnaireData.map(item => {
-        console.log(item)
+    console.log()
+    const accordionCards = pageData[0].acf.repeater.map(item => {
+
         return (
             <Accordion key={item.id}
-                title={item.title.rendered}
-                content={item.content.rendered}
+                title={item.title}
+                content={item.links_or_forms}
                 setDangerHtml={true}
             />
         )
@@ -32,8 +32,8 @@ function Questionnaire({ heroImageData, questionnaireData, technologyPartnersDat
                 {accordionCards}
             </AccordionContainer>
 
-            <TechnologyContainer>
-                <OurTechnologyPartners technologyPartnersData={technologyPartnersData} />
+            <TechnologyContainer
+            >                <OurTechnologyPartners technologyPartnersData={technologyPartnersData} />
             </TechnologyContainer>
 
         </div>

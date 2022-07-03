@@ -19,7 +19,7 @@ function Home({ imageData, servicesData, teamMembersData, technologyPartnersData
             <HeroContainer>
                 <Content>
                     <Subtitle>Bay Accounting </Subtitle>
-                    <SectionTitle fontWeight="600">
+                    <SectionTitle fontWeight="600" align="center">
                         {imageData.title}
                     </SectionTitle>
                     <CTA>
@@ -64,36 +64,40 @@ function Home({ imageData, servicesData, teamMembersData, technologyPartnersData
 export default Home
 const HeroContainer = styled.div`
 height:600px;
-display: flex;
-align-items: center; 
-max-width: 1550px;
-    padding: 0 0 0 10px ;
-    margin: 0 0 0 auto ; 
-    @media(max-width: 1000px){ 
+width: 100%;
+position: relative;
+    /* @media(max-width: 1000px){ 
     flex-wrap: wrap-reverse; 
     height:auto;
     align-items: flex-end; 
     padding: 0 0 0 0 ;
-}
-@media(min-width: 1800px){ 
-    max-width: 1700px;
-}
+} */
+
 `
 const Content = styled.div`
-@media(max-width: 1000px){ 
-    width: 100%; 
-    margin: 30px 0;
-    padding: 0 0 0 10px ;
-
+position:absolute;
+width: 95%; 
+max-width: 700px; 
+ 
+z-index: 10; 
+background: rgba(255,255,255, 1);
+padding: 40px 40px;
+top: 50%; 
+left: 50%;
+transform: translate(-50%, -50%);
+@media(max-width: 600px){ 
+    padding: 30px 10px; 
 }
-    width: 50%;
 `
 const Subtitle = styled.h2`
-
+text-align: center; 
 
 text-transform: uppercase;
 letter-spacing: 1rem;
 margin-bottom: -10px;
+@media(max-width: 500px){ 
+    letter-spacing: 0.5rem; 
+}
 `
 const ButtonStyle = styled(Link)`
 position: relative;
@@ -108,6 +112,7 @@ const CTA = styled.div`
 margin: 10px 0 0 0;
 display: flex ;
 flex-wrap: wrap; 
+justify-content: center; 
 `
 const Blob = styled.div`
 position: absolute;
@@ -170,14 +175,9 @@ object-fit: cover;
 object-position: bottom;
 `
 const ImageContainer = styled.div`
-clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
-position: relative;
-width: 50%;
-height: 100% ;
-@media(max-width: 1000px){ 
-    width: 100%; 
-    clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
-    height: 50vh;
-    margin-top: 10px;
-}
+/* clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%); */
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
 `
