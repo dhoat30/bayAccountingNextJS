@@ -7,10 +7,10 @@ import ServiceCard from '../../UI/Cards/ServiceCard'
 import Image from 'next/image'
 import ColumnTitle from '../../UI/Titles/Titles/ColumnTitle'
 import Paragraph from '../../UI/Titles/Paragraph/Paragraph'
+import GalleryComponent from './GalleryComponent'
 function OurCommunityWork({ heroImageData, communityWorkData, }) {
 
     const serviceCard = communityWorkData.map(item => {
-        console.log(item)
         return (
             // <Card
             //     key={item.id}
@@ -29,10 +29,12 @@ function OurCommunityWork({ heroImageData, communityWorkData, }) {
                     <ParagraphStyle setDangerHtml={true}>{item.content.rendered}</ParagraphStyle>
 
                 </Content>
-
+                <GalleryComponent galleryData={item.acf.gallery} />
             </Card>
         )
     })
+
+
     return (
         <div>
             <HeroImage images={heroImageData} />
@@ -66,14 +68,26 @@ flex-direction: column;
 margin-top: 30px;
 `
 const Card = styled.div`
+
     display: flex;
+    flex-direction: column;
     margin: 0px 0 50px 0;
+  
     background: white;
     padding: 20px;
     box-shadow: var(--boxShadow);
+    @media (max-width: 400px ){ 
+            padding: 10px 10px;
+            width:100% ;
+        }
     ul{ 
         list-style: disc;  
-        margin-left: 30px;  
+        margin-left: 30px;
+        font-size: 1rem;  
+        margin-top:-10px; 
+    }
+    p{ 
+        font-size: 1rem; 
     }
 `
 // const ImageContainer = styled.div`
@@ -88,8 +102,7 @@ const Card = styled.div`
 //     object-fit: cover; 
 // `
 const Content = styled.div`
-width: 100%; 
-margin-left: 30px;
+margin: 0 20px;
 `
 
 

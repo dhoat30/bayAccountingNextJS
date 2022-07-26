@@ -1,4 +1,3 @@
-import cookie from 'cookie'
 import Head from 'next/head'
 import React from 'react'
 import Questionnaire from '../../Components/Pages/Home/ClientResources/Questionnaire'

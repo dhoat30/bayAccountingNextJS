@@ -9,7 +9,7 @@ import { HeroImageContextProvider } from '../store/hero-image-context';
 import { LoadingContextProvider } from '../store/loading-context'
 import Router from 'next/router'
 import LoadingOverlay from '../Components/UI/LoadingOverlay/LoadingOverlay';
-
+import SSRProvider from 'react-bootstrap/SSRProvider'
 function MyApp({ Component, pageProps }) {
   const [showLoading, setShowLoading] = useState(false)
 
@@ -25,25 +25,27 @@ function MyApp({ Component, pageProps }) {
     setShowLoading(false)
   })
   return (
-    <React.Fragment>
-      <ContactInfoContextProvider>
-        <HeroImageContextProvider>
-          <LoadingContextProvider>
-            <GlobalStyle />
-            <ThemeProvider theme={theme}>
-              <Layout>
-                <Head>
-                  <meta charSet="utf-8" />
-                  <meta name="viewport" content="width=device-width, initial-scale=1" />
-                </Head>
-                <Component {...pageProps} />
-                <LoadingOverlay show={showLoading} />
-              </Layout>
-            </ThemeProvider>
-          </LoadingContextProvider>
-        </HeroImageContextProvider>
-      </ContactInfoContextProvider>
-    </React.Fragment>
+    <SSRProvider>
+      <React.Fragment>
+        <ContactInfoContextProvider>
+          <HeroImageContextProvider>
+            <LoadingContextProvider>
+              <GlobalStyle />
+              <ThemeProvider theme={theme}>
+                <Layout>
+                  <Head>
+                    <meta charSet="utf-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                  </Head>
+                  <Component {...pageProps} />
+                  <LoadingOverlay show={showLoading} />
+                </Layout>
+              </ThemeProvider>
+            </LoadingContextProvider>
+          </HeroImageContextProvider>
+        </ContactInfoContextProvider>
+      </React.Fragment>
+    </SSRProvider>
   )
 }
 

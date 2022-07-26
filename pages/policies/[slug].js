@@ -1,4 +1,3 @@
-import cookie from 'cookie'
 import Head from 'next/head'
 import React, { useContext, useEffect } from 'react'
 import PolicyPage from '../../Components/Pages/PolicyPage/PolicyPage'

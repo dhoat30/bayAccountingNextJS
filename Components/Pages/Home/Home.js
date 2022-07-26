@@ -19,9 +19,9 @@ function Home({ imageData, servicesData, teamMembersData, technologyPartnersData
             <HeroContainer>
                 <Content>
                     <Subtitle>Bay Accounting </Subtitle>
-                    <SectionTitle fontWeight="600" align="center">
+                    <SectionTitleStyle fontWeight="600" color="white">
                         {imageData.title}
-                    </SectionTitle>
+                    </SectionTitleStyle>
                     <CTA>
                         <ButtonContainer bkColor={true}>
                             <ButtonStyle bkColor={true} href="tel:075793830" passHref>
@@ -63,7 +63,7 @@ function Home({ imageData, servicesData, teamMembersData, technologyPartnersData
 
 export default Home
 const HeroContainer = styled.div`
-height:600px;
+padding-bottom: 47%;
 width: 100%;
 position: relative;
     /* @media(max-width: 1000px){ 
@@ -72,7 +72,13 @@ position: relative;
     align-items: flex-end; 
     padding: 0 0 0 0 ;
 } */
-
+@media(max-width: 800px){ 
+    padding-bottom: 100%;
+    /* display:flex;
+    padding-bottom: 0; 
+    height: 500px;
+    flex-direction: column-reverse ; */
+}
 `
 const Content = styled.div`
 position:absolute;
@@ -80,18 +86,15 @@ width: 95%;
 max-width: 700px; 
  
 z-index: 10; 
-background: rgba(255,255,255, 1);
 padding: 40px 40px;
 top: 50%; 
-left: 50%;
-transform: translate(-50%, -50%);
-@media(max-width: 600px){ 
-    padding: 30px 10px; 
-}
+left: 0%;
+transform: translate(0%, -50%);
+
 `
 const Subtitle = styled.h2`
-text-align: center; 
-
+text-align: left; 
+color:  #fff;
 text-transform: uppercase;
 letter-spacing: 1rem;
 margin-bottom: -10px;
@@ -105,6 +108,7 @@ z-index: 1;
  background: none;
  cursor: pointer;
  border: none;
+ 
  color: ${props => props.bkColor === "var(--white)" ? "rgba(0,0,0,1)" : "white"}; 
 `
 
@@ -112,11 +116,15 @@ const CTA = styled.div`
 margin: 10px 0 0 0;
 display: flex ;
 flex-wrap: wrap; 
-justify-content: center; 
+justify-content: flex-start; 
 `
 const Blob = styled.div`
 position: absolute;
 padding: 25px 40px;
+@media(max-width: 600px){ 
+    padding: 20px 25px;
+
+}
 background: ${props => props.bkColor === "var(--white)" ? "var(--lightGreen)" : "var(--darkGrey)"}; 
 border-radius: 30px;
 top: 50%;
@@ -135,6 +143,9 @@ margin: 10px 10px 0 0;
   display: inline; 
   background: ${props => props.bkColor === "var(--white)" ? "var(--white)" : "var(--lightGreen)"}; 
   padding: 15px 50px;
+  @media(max-width: 600px){ 
+      padding: 10px 20px;
+  }
   border: ${props => props.bkColor === "var(--white)" ? "2px solid var(--lightGreen)" : "2px solid rgba(0,0,0,0)"};
 border-radius: 50px;
 font-size: 1.2rem;
@@ -172,7 +183,7 @@ fill: white;
 
 const ImageStyle = styled(Image)`
 object-fit: cover; 
-object-position: bottom;
+object-position: 60% 60%; 
 `
 const ImageContainer = styled.div`
 /* clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%); */
@@ -180,4 +191,10 @@ position: absolute;
 width: 100%;
 height: 100%;
 top: 0;
+
+`
+
+const SectionTitleStyle = styled(SectionTitle)`
+color: #fff ;
+font-weight: 700;
 `

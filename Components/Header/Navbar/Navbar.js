@@ -72,9 +72,9 @@ function NavbarComponent() {
 
                         </NavDropdown>
 
-                        <Link href="/news" passHref>
+                        {/* <Link href="/news" passHref>
                             <Nav.Link >News</Nav.Link>
-                        </Link>
+                        </Link> */}
                         <Link href="/contact" passHref>
                             <Nav.Link >Contact</Nav.Link>
                         </Link>

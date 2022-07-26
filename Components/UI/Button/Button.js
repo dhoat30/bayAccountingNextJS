@@ -30,6 +30,10 @@ top: 50%;
 right: 20px;
 transform: translate(0%,-50%);
 z-index: 0;
+@media(max-width: 600px){ 
+    padding: 20px 25px;
+
+}
 `
 const Container = styled.div`
   position: relative;
@@ -41,6 +45,9 @@ border-radius: 50px;
 font-size: 1.2rem;
 cursor: pointer;
 transition: 300ms ease-in-out;
+@media(max-width: 600px){ 
+      padding: 10px 20px;
+  }
   &:hover{
   background: ${props => props.bkColor === "var(--white)" ? "var(--lightGreen)" : "var(--white)"}; 
   border: 2px solid var(--lightGreen);
@@ -51,4 +58,5 @@ transition: 300ms ease-in-out;
   &:hover ${ButtonStyle} {
     color: ${props => props.bkColor === "var(--white)" ? "var(--white)" : "rgba(0,0,0,1)"}; 
 }
+
 `

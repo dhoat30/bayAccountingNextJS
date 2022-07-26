@@ -1,4 +1,3 @@
-import cookie from 'cookie'
 import Head from 'next/head'
 import React, { useContext } from 'react'
 import MeetOurTeam from '../../Components/Pages/MeetOurTeam/MeetOurTeam'

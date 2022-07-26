@@ -1,4 +1,3 @@
-import cookie from 'cookie'
 import Head from 'next/head'
 import React, { useContext } from 'react'
 import OurCommunityWork from '../../Components/Pages/OurCommunityWork/OurCommunityWork'
@@ -6,7 +5,7 @@ import getCommunityWork from '../../util/get-community-work'
 import getHeroImageData from '../../util/get-hero-image-data'
 
 export default function OurCommunityWorkPage(props) {
-
+  console.log(props)
   return (
     < React.Fragment >
       <Head>
@@ -15,6 +14,7 @@ export default function OurCommunityWorkPage(props) {
       <OurCommunityWork
         heroImageData={props.heroImageData}
         communityWorkData={props.communityWorkData}
+
       />
 
     </React.Fragment >
@@ -32,13 +32,11 @@ export async function getStaticProps(context) {
           desktopImage: heroImageData[0].image,
           mobileImage: heroImageData[0].acf.mobileImage,
         },
-        title: heroImageData[0].title,
+        title: heroImageData[0].title
       },
       communityWorkData: communityWorkData,
 
     },
     revalidate: 10
   }
-
-
 }
