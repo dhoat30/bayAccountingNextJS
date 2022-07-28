@@ -52,7 +52,7 @@ function TopNavbar() {
                         <path id="Icon_awesome-map-marker-alt" data-name="Icon awesome-map-marker-alt" d="M7.179,20.905C1.124,12.128,0,11.227,0,8A8,8,0,0,1,16,8c0,3.226-1.124,4.127-7.179,12.9a1,1,0,0,1-1.645,0ZM8,11.335A3.334,3.334,0,1,0,4.667,8,3.334,3.334,0,0,0,8,11.335Z" fill="#fff" />
                     </IconStyle>
 
-                    <Link href="#">Te Puna</Link>
+                    <Link href="#">Te Puna, Tauranga</Link>
                 </Item>
                 {/* <Item>
                     <IconStyle icon={faMapMarkerAlt} />

@@ -23,7 +23,7 @@ function OurTechnologyPartners({ technologyPartnersData }) {
 export default OurTechnologyPartners
 const Container = styled.div`
 max-width: 1500px ;
-padding: 0 10px;
+padding: 50px 10px 50px 10px;
 margin: 0 auto;
 `
 const CardsContainer = styled.div`

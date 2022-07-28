@@ -22,25 +22,31 @@ function ContactSection() {
     })
 
     return (
-        <Container>
-            <MapContainer>
-                {siteImageCard}
-            </MapContainer>
-            <ContactContainer>
+        <Section>
+            <Container>
+                <MapContainer>
+                    {siteImageCard}
+                </MapContainer>
+                <ContactContainer>
 
-                <SectionTitle >Contact Us</SectionTitle>
-                <ContactForm emailRouteUrl={`${process.env.url}/wp-json/inspiry/v1/contact-email`} emailTo={contactInfoCtx.contactData[0].acf.email}></ContactForm>
-            </ContactContainer>
-        </Container>
+                    <SectionTitle >Contact Us</SectionTitle>
+                    <ContactForm emailRouteUrl={`${process.env.url}/wp-json/inspiry/v1/contact-email`} emailTo={contactInfoCtx.contactData[0].acf.email}></ContactForm>
+                </ContactContainer>
+            </Container>
+        </Section>
     )
 }
 
 export default ContactSection
-const Container = styled.section`
+const Section = styled.div`
 background: var(--offWhite);
+padding: 50px 0;
+`
+const Container = styled.section`
+background: var(--white);
 padding: 30px;
 max-width: 1000px;
-margin: 150px auto 100px auto;
+margin: 0 auto ;
 display: flex;
 justify-content: space-between;
 align-items: flex-end;

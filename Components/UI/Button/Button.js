@@ -58,5 +58,4 @@ transition: 300ms ease-in-out;
   &:hover ${ButtonStyle} {
     color: ${props => props.bkColor === "var(--white)" ? "var(--white)" : "rgba(0,0,0,1)"}; 
 }
-
 `

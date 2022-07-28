@@ -21,10 +21,10 @@ function UsefulFormsLinks({ heroImageData, technologyPartnersData, pageData, use
             <HeroImage images={heroImageData} smallHeight={true} />
             <FlexBox>
                 <TitleContainer>
-                    <Subtitle>Drop A Message</Subtitle>
+                    <Subtitle>Links</Subtitle>
                     <SectionTitle >{pageData[0].title.rendered}</SectionTitle>
                 </TitleContainer>
-                <ParagraphStyle setDangerHtml={true}>{pageData[0].content.rendered}</ParagraphStyle>
+                {/* <ParagraphStyle setDangerHtml={true}>{pageData[0].content.rendered}</ParagraphStyle> */}
             </FlexBox>
 
             <AccordionContainer>
@@ -81,7 +81,7 @@ const Subtitle = styled.h3`
     }
 `
 const AccordionContainer = styled.div`
-margin: 0 auto 100px auto;
+margin: 0 auto 50px auto;
 max-width: 1000px;
 padding: 0 20px;
 @media (max-width){ 
@@ -90,6 +90,6 @@ padding: 0 20px;
 `
 
 const TechnologyContainer = styled.div`
-margin: 100px auto;
+margin: 50px auto;
 max-width: 1500px;
 `

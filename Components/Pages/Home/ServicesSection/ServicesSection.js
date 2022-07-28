@@ -24,7 +24,7 @@ function ServicesSection({ servicesData }) {
             </ButtonContainer> */}
 
             <Container>
-                <SectionTitle subtitle="Our Services" align="center">We Provide Most Exclusive Services For Business</SectionTitle>
+                <SectionTitle subtitle="Our Services" align="center"></SectionTitle>
                 <CardsContainer>
                     {serviceCard}
                 </CardsContainer>
