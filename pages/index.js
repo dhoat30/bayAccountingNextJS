@@ -10,16 +10,16 @@ import getTestimonials from '../util/get-testimonials'
 
 export default function Home(props) {
 
-  const seo = {
-    title: props.heroImageData.seo.seoTitle[0],
-    description: props.heroImageData.seo.seoDesc[0],
-    imageSrc: props.heroImageData.images.mobileImage
-  }
+  // const seo = {
+  //   title: props.heroImageData.seo.seoTitle[0],
+  //   description: props.heroImageData.seo.seoDesc[0],
+  //   imageSrc: props.heroImageData.images.mobileImage
+  // }
   return (
     < React.Fragment >
-      <SEO
+      {/* <SEO
         seo={seo}
-      />
+      /> */}
       <HomePage
         imageData={props.heroImageData}
         servicesData={props.servicesData.reverse()}
@@ -38,6 +38,7 @@ export async function getStaticProps(context) {
   const teamMembersData = await getTeamMembers()
   const technologyPartnersData = await getTechnologyPartners()
   const testimonialsData = await getTestimonials()
+  console.log(data)
   return {
     props: {
       heroImageData: {
@@ -46,13 +47,12 @@ export async function getStaticProps(context) {
           mobileImage: data[0].acf.mobileImage,
         },
         title: data[0].title,
-        seo: data[0].seo
+        // seo: data[0].seo
       },
       servicesData: servicesData,
       teamMembersData: teamMembersData,
       technologyPartnersData: technologyPartnersData,
       testimonialsData: testimonialsData
-
     },
     revalidate: 10
   }

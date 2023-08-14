@@ -12,8 +12,8 @@ function HeroImage({ images, subtitle, smallHeight }) {
     return (
         <Container smallHeight={smallHeight}>
             {isMobile ?
-                <ImageStyle src={images.images.mobileImage} layout="fill" />
-                : <ImageStyle src={images.images.desktopImage} layout="fill" />
+                <ImageStyle src={images.images.mobileImage} layout="responsive" />
+                : <ImageStyle src={images.images.desktopImage} layout="responsive" />
             }
             <Content>
                 <Subtitle>{subtitle}</Subtitle>

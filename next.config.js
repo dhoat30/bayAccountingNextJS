@@ -9,12 +9,12 @@ module.exports = (phase, { defaultConfig }) => {
         styledComponents: true
       },
       env: {
-        url: "https://bayaccounting.co.nz",
+        url: "https://bafsnz.co.nz",
         SITE_URL: "http://localhost:3000"
       },
       reactStrictMode: true,
       images: {
-        domains: ['bayaccounting.co.nz']
+        domains: ['bafsnz.co.nz']
       }
     }
   }
@@ -24,12 +24,12 @@ module.exports = (phase, { defaultConfig }) => {
       styledComponents: true
     },
     env: {
-      url: "https://bayaccounting.co.nz",
-      SITE_URL: "https://bayaccounting.co.nz"
+      url: "https://bafsnz.co.nz",
+      SITE_URL: "https://bafsnz.co.nz"
     },
     reactStrictMode: true,
     images: {
-      domains: ['bayaccounting.co.nz']
+      domains: ['bafsnz.co.nz']
     }
   }
 }
